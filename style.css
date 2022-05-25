@@ -24,6 +24,8 @@ body {
 }
 
 .MainContainer{
+    justify-content: center; 
+    align-items: center;
     max-width: var(--content-width);
 }
 
