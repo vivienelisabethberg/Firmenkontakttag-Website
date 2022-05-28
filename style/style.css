@@ -1,0 +1,228 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "OpenSans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: url("../svg/Gruppe 4.svg") 1006px -225px no-repeat;
+  background-size: 50%;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Flama";
+}
+
+:root {
+  --footerColor: #3d3d3b;
+  --purple: #981b53;
+  --red: #cf0510;
+  --cardColor: #d4d3d3;
+}
+
+nav {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 55px;
+}
+
+li {
+  display: inline;
+}
+
+h3 {
+  font-family: "Flama book";
+  font-size: 19px;
+  margin: 0;
+  color: var(--purple);
+}
+
+p {
+  margin: 0;
+}
+
+.HsrmLogo {
+  width: 20%;
+}
+
+h1 {
+  font-family: "Flama medium";
+  font-size: 35px;
+  text-transform: uppercase;
+  color: var(--red);
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.icon-size {
+  width: 1.5%;
+}
+
+.icon-size-cards {
+  width: 13%;
+}
+
+.logo-size {
+  max-width: 40%;
+}
+
+.blocksatz {
+  width: 60em;
+  margin-top: 1.5em;
+  margin-bottom: 5.5em;
+  word-spacing: 5px;
+}
+
+.MainContainer {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15em;
+  padding-right: 15em;
+}
+
+.cards {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  gap: 1em;
+}
+
+.cards .card {
+  background-color: var(--cardColor);
+  padding: 17px;
+}
+
+.cards .card .grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.cards .card .grid .left {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.cards .card .grid .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  gap: 0.5em;
+  width: 40%;
+}
+
+.cards .card .icon-ausrichtung {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+.cards .card .link {
+  margin-bottom: 10px;
+}
+
+.cards .card .text {
+  margin-bottom: 10px;
+}
+
+.cards .card .flex-end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+footer {
+  min-height: 100px;
+  padding-left: 15em;
+  padding-right: 15em;
+  padding-top: 1em;
+  margin-top: 4em;
+  background-color: var(--footerColor);
+}
+
+footer .float {
+  display: -ms-grid;
+  display: grid;
+}
+
+footer .float .textFooter {
+  color: white;
+  font-size: small;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+footer .float .floatright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-size: small;
+}
+
+footer .float .floatright a {
+  color: white;
+}
+
+footer .float .floatright a :hover {
+  color: var(--red);
+}
+/*# sourceMappingURL=style.css.map */
