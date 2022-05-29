@@ -141,6 +141,52 @@ h1 {
   }
 }
 
+.form {
+  max-width: 500px;
+  max-height: 500px;
+  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px 50px 50px;
+    gap: 10px;
+    grid-template-areas: 
+    "namel empty"
+    "namet namet"
+    "strasse nr"
+    "plz adresse";
+    //"adresse empty empty empty empty "
+    //"strasse strasse strasse strasse nr"
+    //"plz plz stadt stadt stadt"
+    //"submit submit empty empty empty ";
+
+    .item-namel{
+      grid-area: namel;
+    }
+    .item-namet{
+      grid-area: namet;
+    }
+    .item-adresse{
+      grid-area: adresse;
+    }
+    .item-strasse{
+      grid-area: strasse;
+    }
+    .item-nr{
+      grid-area: nr;
+    }
+    .item-plz{
+      grid-area: plz;
+    }
+    .item-stadt{
+      grid-area: stadt;
+    }
+    .item-submit{
+      grid-area: submit;
+    }
+    .empty{
+      grid-area: empty;
+    }
+}
+
 footer {
   min-height: 100px;
   padding-left: 15em;

@@ -2,8 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "OpenSans", sans-serif;
   scroll-behavior: smooth;
 }
@@ -14,8 +13,7 @@ body {
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "Flama";
 }
 
@@ -27,17 +25,10 @@ body {
 }
 
 nav {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  box-sizing: border-box;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   list-style-type: none;
   padding: 0;
   margin-bottom: 55px;
@@ -91,95 +82,92 @@ h1 {
 }
 
 .MainContainer {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
   padding-left: 15em;
   padding-right: 15em;
 }
 
 .cards {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -ms-grid;
+  box-sizing: border-box;
   display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
+  grid-template-columns: auto auto;
   gap: 1em;
 }
-
 .cards .card {
   background-color: var(--cardColor);
   padding: 17px;
 }
-
 .cards .card .grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-bottom: 10px;
 }
-
 .cards .card .grid .left {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
 }
-
 .cards .card .grid .right {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  height: -webkit-min-content;
-  height: -moz-min-content;
+  align-items: center;
+  justify-content: flex-end;
   height: min-content;
   gap: 0.5em;
   width: 40%;
 }
-
 .cards .card .icon-ausrichtung {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 5px;
 }
-
 .cards .card .link {
   margin-bottom: 10px;
 }
-
 .cards .card .text {
   margin-bottom: 10px;
 }
-
 .cards .card .flex-end {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 5px;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.form {
+  max-width: 500px;
+  max-height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 50px 50px 50px;
+  gap: 10px;
+  grid-template-areas: "namel empty" "namet namet" "strasse nr" "plz adresse";
+}
+.form .item-namel {
+  grid-area: namel;
+}
+.form .item-namet {
+  grid-area: namet;
+}
+.form .item-adresse {
+  grid-area: adresse;
+}
+.form .item-strasse {
+  grid-area: strasse;
+}
+.form .item-nr {
+  grid-area: nr;
+}
+.form .item-plz {
+  grid-area: plz;
+}
+.form .item-stadt {
+  grid-area: stadt;
+}
+.form .item-submit {
+  grid-area: submit;
+}
+.form .empty {
+  grid-area: empty;
 }
 
 footer {
@@ -190,39 +178,26 @@ footer {
   margin-top: 4em;
   background-color: var(--footerColor);
 }
-
 footer .float {
-  display: -ms-grid;
   display: grid;
 }
-
 footer .float .textFooter {
   color: white;
   font-size: small;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
 }
-
 footer .float .floatright {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-end;
+  align-items: center;
   color: white;
   font-size: small;
 }
-
 footer .float .floatright a {
   color: white;
 }
-
 footer .float .floatright a :hover {
   color: var(--red);
 }
+
 /*# sourceMappingURL=style.css.map */
