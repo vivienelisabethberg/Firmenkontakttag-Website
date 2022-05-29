@@ -15,6 +15,7 @@ body {
 * {
   box-sizing: border-box;
   font-family: "Flama";
+  color: var(--textColor);
 }
 
 :root {
@@ -23,6 +24,7 @@ body {
   --purple: #981b53;
   --red: #cf0510;
   --cardColor: #d4d3d3;
+  --textColor: #46413c;
 }
 
 nav {
@@ -63,12 +65,16 @@ h1 {
   padding-bottom: 10px;
 }
 
-.icon-size {
-  width: 1.5%;
+.icon-size-clock {
+  height: 16px;
 }
 
-.icon-size-cards{
-    width:13%
+.icon-size-map-marker {
+  width: 14px;
+}
+
+.icon-size-cards {
+  width: 13%;
 }
 
 .logo-size {
@@ -80,6 +86,34 @@ h1 {
   margin-top: 1.5em;
   margin-bottom: 5.5em;
   word-spacing: 5px;
+}
+
+.grid-suchleiste {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: center;
+  .firmenübersicht {
+    font-size: 25px;
+    justify-content: flex-start;
+  }
+
+  .input-grid{
+    display:flex;
+   
+    input{
+      border: solid 1px var(--textColor);
+      padding: 3px;
+    }
+    .logo-container{
+      padding: 3px;
+      border: solid 1px var(--textColor);
+      border-left: none;
+      img{
+        display: block;
+      }
+    }
+  }
 }
 
 .MainContainer {
@@ -115,6 +149,10 @@ h1 {
         height: min-content;
         gap: 0.5em;
         width: 40%;
+
+        p {
+          flex-shrink: 0;
+        }
       }
     }
 
@@ -126,6 +164,9 @@ h1 {
 
     .link {
       margin-bottom: 10px;
+      a {
+        color: var(--textColor);
+      }
     }
 
     .text {
@@ -137,6 +178,10 @@ h1 {
       align-items: center;
       gap: 5px;
       justify-content: flex-end;
+
+      a {
+        color: var(--textColor);
+      }
     }
   }
 }
@@ -154,20 +199,29 @@ footer {
       color: white;
       font-size: small;
       justify-content: flex-start;
-    }
-    .floatright{
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        color: white;
-        font-size: small;
-        a{
-            color:white
-        }
 
-        a :hover{
-            color: var(--red);
-        }
+      b{
+        color: white;
+      }
+
+    }
+    .floatright {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      color: white;
+      font-size: small;
+      a {
+        color: white;
+      }
+
+      a :hover {
+        color: var(--red);
+      }
+
+      p{
+        color: white;
+      }
     }
   }
 }
