@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  height: 100%;
   font-family: "OpenSans", sans-serif;
   scroll-behavior: smooth;
 }
@@ -22,6 +23,7 @@ body {
   //--content-width: 60em;
   --purple: #981b53;
   --red: #cf0510;
+  --red-low: #c95258;
   --cardColor: #d4d3d3;
 }
 
@@ -83,6 +85,7 @@ h1 {
 }
 
 .MainContainer {
+  min-height: 100%;
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
@@ -141,50 +144,116 @@ h1 {
   }
 }
 
-.form {
-  max-width: 500px;
-  max-height: 500px;
-  display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50px 50px 50px 50px;
-    gap: 10px;
-    grid-template-areas: 
-    "namel empty"
-    "namet namet"
-    "strasse nr"
-    "plz adresse";
-    //"adresse empty empty empty empty "
-    //"strasse strasse strasse strasse nr"
-    //"plz plz stadt stadt stadt"
-    //"submit submit empty empty empty ";
+form {
+  max-width: 700px;
+  width: 100%;
+  .inputs{
+    display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			margin: 20px 0 12px 0;
 
-    .item-namel{
-      grid-area: namel;
+      .input-box{
+        margin-bottom: 15px;
+        width: calc(50% - 20px);
+      }
+      .nr-box{
+        margin-top: auto;
+        margin-bottom: 15px;
+        width: calc(30% - 40px);
+      }
+      .str-box{
+        margin-bottom: 15px;
+        width: 70%;
+      }
+      .text-box{
+        width: 100%;
+      }
+  }
+  .inputs>*:first-child{
+    width: -moz-available;
+  }
+  .input-box, .nr-box, .str-box, .text-box{
+      label {
+        display: block;
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+	}
+  .button {
+		height: 45px;
+		margin: 35px 0;
+    width: calc(100% / 3 - 20px);
+		input {
+			height: 100%;
+			width: 100%;
+			border-radius: 8px;
+			border: groove;
+      border-color: var(--red);
+			font-size: 18px;
+			font-weight: 650;
+			letter-spacing: 1px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			background: var(--cardColor);
+			&:hover {
+				background: var(--red-low);
+			}
+		}
+	}
+}
+.inputs {
+	.input-box, .nr-box, .str-box,.text-box{
+		input, textarea {
+			height: 45px;
+			width: 100%;
+			outline: none;
+			font-size: 16px;
+			border-radius: 5px;
+			padding-left: 15px;
+			border: 1px solid #ccc;
+			border-bottom-width: 2px;
+			transition: all 0.3s ease;
+			&:focus {
+				border-color: var(--red-low);
+			}
+			&:valid {
+				border-color: var(--purple-low);
+			}
+		}
+	}
+}
+@media (max-width: 1000px) {
+  .MainContainer {
+    max-width: 100%;
+    padding-left: 10em;
+    padding-right: 10em;
+  }
+}
+@media (max-width: 670px) {
+  .MainContainer {
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+  form {
+		.inputs {
+			.input-box, .nr-box, .str-box, .text-box, .button {
+				margin-bottom: 15px;
+				width: 100%;
+			}
+		}
+	}
+
+  form {
+    .inputs {
+      overflow-y: scroll;
     }
-    .item-namet{
-      grid-area: namet;
-    }
-    .item-adresse{
-      grid-area: adresse;
-    }
-    .item-strasse{
-      grid-area: strasse;
-    }
-    .item-nr{
-      grid-area: nr;
-    }
-    .item-plz{
-      grid-area: plz;
-    }
-    .item-stadt{
-      grid-area: stadt;
-    }
-    .item-submit{
-      grid-area: submit;
-    }
-    .empty{
-      grid-area: empty;
-    }
+  }
+	.inputs {
+		&::-webkit-scrollbar {
+			width: 5px;
+		}
+	}
 }
 
 footer {
@@ -193,27 +262,34 @@ footer {
   padding-right: 15em;
   padding-top: 1em;
   margin-top: 4em;
-  background-color: var(--footerColor);
+  background: var(--footerColor);
+  position: relative;
+  width: 100%;
+  color: white;
   .float {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
     display: grid;
+    width: 100%;
+    padding: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
     .textFooter {
-      color: white;
       font-size: small;
-      justify-content: flex-start;
     }
     .floatright{
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        color: white;
-        font-size: small;
-        a{
-            color:white
-        }
-
-        a :hover{
-            color: var(--red);
-        }
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      font-size: small;
+      a{
+        color:white
+      }
+      
+      a :hover{
+        color: var(--red);
+      }
     }
   }
 }
