@@ -250,6 +250,8 @@ footer {
   padding-top: 1em;
   margin-top: 4em;
   background-color: var(--footerColor);
+  position: -webkit-sticky;
+  position: sticky;
 }
 
 footer .float {
