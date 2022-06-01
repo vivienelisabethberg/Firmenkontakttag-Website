@@ -209,6 +209,9 @@ form .button input:hover {
 .inputs .input-box input:valid, .inputs .input-box textarea:valid, .inputs .nr-box input:valid, .inputs .nr-box textarea:valid, .inputs .str-box input:valid, .inputs .str-box textarea:valid, .inputs .text-box input:valid, .inputs .text-box textarea:valid {
   border-color: var(--purple-low);
 }
+.inputs .input-box textarea, .inputs .nr-box textarea, .inputs .str-box textarea, .inputs .text-box textarea {
+  height: 100px;
+}
 
 @media (max-width: 1000px) {
   .MainContainer {

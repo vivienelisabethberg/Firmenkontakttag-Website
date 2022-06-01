@@ -221,6 +221,9 @@ form {
 				border-color: var(--purple-low);
 			}
 		}
+    textarea {
+      height: 100px;
+    }
 	}
 }
 @media (max-width: 1000px) {
