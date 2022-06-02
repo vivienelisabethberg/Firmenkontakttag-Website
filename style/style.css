@@ -6,7 +6,6 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 100%;
-  font-family: "OpenSans", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -18,8 +17,8 @@ body {
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Flama";
   color: var(--textColor);
+  font-family: "Flama";
 }
 
 :root {
@@ -287,7 +286,10 @@ form .inputs > *:first-child {
   width: -moz-available;
 }
 
-form .input-box label, form .nr-box label, form .str-box label, form .text-box label {
+form .input-box label,
+form .nr-box label,
+form .str-box label,
+form .text-box label {
   display: block;
   font-weight: 500;
   margin-bottom: 5px;
@@ -318,7 +320,14 @@ form .button input:hover {
   background: var(--red-low);
 }
 
-.inputs .input-box input, .inputs .input-box textarea, .inputs .nr-box input, .inputs .nr-box textarea, .inputs .str-box input, .inputs .str-box textarea, .inputs .text-box input, .inputs .text-box textarea {
+.inputs .input-box input,
+.inputs .input-box textarea,
+.inputs .nr-box input,
+.inputs .nr-box textarea,
+.inputs .str-box input,
+.inputs .str-box textarea,
+.inputs .text-box input,
+.inputs .text-box textarea {
   height: 45px;
   width: 100%;
   outline: none;
@@ -331,11 +340,25 @@ form .button input:hover {
   transition: all 0.3s ease;
 }
 
-.inputs .input-box input:focus, .inputs .input-box textarea:focus, .inputs .nr-box input:focus, .inputs .nr-box textarea:focus, .inputs .str-box input:focus, .inputs .str-box textarea:focus, .inputs .text-box input:focus, .inputs .text-box textarea:focus {
+.inputs .input-box input:focus,
+.inputs .input-box textarea:focus,
+.inputs .nr-box input:focus,
+.inputs .nr-box textarea:focus,
+.inputs .str-box input:focus,
+.inputs .str-box textarea:focus,
+.inputs .text-box input:focus,
+.inputs .text-box textarea:focus {
   border-color: var(--red-low);
 }
 
-.inputs .input-box input:valid, .inputs .input-box textarea:valid, .inputs .nr-box input:valid, .inputs .nr-box textarea:valid, .inputs .str-box input:valid, .inputs .str-box textarea:valid, .inputs .text-box input:valid, .inputs .text-box textarea:valid {
+.inputs .input-box input:valid,
+.inputs .input-box textarea:valid,
+.inputs .nr-box input:valid,
+.inputs .nr-box textarea:valid,
+.inputs .str-box input:valid,
+.inputs .str-box textarea:valid,
+.inputs .text-box input:valid,
+.inputs .text-box textarea:valid {
   border-color: var(--purple-low);
 }
 
@@ -352,7 +375,11 @@ form .button input:hover {
     padding-left: 5em;
     padding-right: 5em;
   }
-  form .inputs .input-box, form .inputs .nr-box, form .inputs .str-box, form .inputs .text-box, form .inputs .button {
+  form .inputs .input-box,
+  form .inputs .nr-box,
+  form .inputs .str-box,
+  form .inputs .text-box,
+  form .inputs .button {
     margin-bottom: 15px;
     width: 100%;
   }
@@ -411,5 +438,13 @@ footer .float .floatright a {
 
 footer .float .floatright a :hover {
   color: var(--red);
+}
+
+.kastenFlext {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 /*# sourceMappingURL=style.css.map */

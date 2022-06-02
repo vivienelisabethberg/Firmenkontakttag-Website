@@ -4,7 +4,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   height: 100%;
-  font-family: "OpenSans", sans-serif;
+
   scroll-behavior: smooth;
 }
 
@@ -15,8 +15,8 @@ body {
 
 * {
   box-sizing: border-box;
-  font-family: "Flama";
   color: var(--textColor);
+  font-family: "Flama";
 }
 
 :root {
@@ -100,18 +100,18 @@ h1 {
     justify-content: flex-start;
   }
 
-  .input-grid{
-    display:flex;
-   
-    input{
+  .input-grid {
+    display: flex;
+
+    input {
       border: solid 1px var(--textColor);
       padding: 3px;
     }
-    .logo-container{
+    .logo-container {
       padding: 3px;
       border: solid 1px var(--textColor);
       border-left: none;
-      img{
+      img {
         display: block;
       }
     }
@@ -192,81 +192,88 @@ h1 {
 form {
   max-width: 700px;
   width: 100%;
-  .inputs{
+  .inputs {
     display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			margin: 20px 0 12px 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
 
-      .input-box{
-        margin-bottom: 15px;
-        width: calc(50% - 20px);
-      }
-      .nr-box{
-        margin-top: auto;
-        margin-bottom: 15px;
-        width: calc(30% - 40px);
-      }
-      .str-box{
-        margin-bottom: 15px;
-        width: 70%;
-      }
-      .text-box{
-        width: 100%;
-      }
+    .input-box {
+      margin-bottom: 15px;
+      width: calc(50% - 20px);
+    }
+    .nr-box {
+      margin-top: auto;
+      margin-bottom: 15px;
+      width: calc(30% - 40px);
+    }
+    .str-box {
+      margin-bottom: 15px;
+      width: 70%;
+    }
+    .text-box {
+      width: 100%;
+    }
   }
-  .inputs>*:first-child{
+  .inputs > *:first-child {
     width: -moz-available;
   }
-  .input-box, .nr-box, .str-box, .text-box{
-      label {
-        display: block;
-        font-weight: 500;
-        margin-bottom: 5px;
-      }
-	}
+  .input-box,
+  .nr-box,
+  .str-box,
+  .text-box {
+    label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+  }
   .button {
-		height: 45px;
-		margin: 35px 0;
+    height: 45px;
+    margin: 35px 0;
     width: calc(100% / 3 - 20px);
-		input {
-			height: 100%;
-			width: 100%;
-			border-radius: 8px;
-			border: groove;
+    input {
+      height: 100%;
+      width: 100%;
+      border-radius: 8px;
+      border: groove;
       border-color: var(--red);
-			font-size: 18px;
-			font-weight: 650;
-			letter-spacing: 1px;
-			cursor: pointer;
-			transition: all 0.3s ease;
-			background: var(--cardColor);
-			&:hover {
-				background: var(--red-low);
-			}
-		}
-	}
+      font-size: 18px;
+      font-weight: 650;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: var(--cardColor);
+      &:hover {
+        background: var(--red-low);
+      }
+    }
+  }
 }
 .inputs {
-	.input-box, .nr-box, .str-box,.text-box{
-		input, textarea {
-			height: 45px;
-			width: 100%;
-			outline: none;
-			font-size: 16px;
-			border-radius: 5px;
-			padding-left: 15px;
-			border: 1px solid #ccc;
-			border-bottom-width: 2px;
-			transition: all 0.3s ease;
-			&:focus {
-				border-color: var(--red-low);
-			}
-			&:valid {
-				border-color: var(--purple-low);
-			}
-		}
-	}
+  .input-box,
+  .nr-box,
+  .str-box,
+  .text-box {
+    input,
+    textarea {
+      height: 45px;
+      width: 100%;
+      outline: none;
+      font-size: 16px;
+      border-radius: 5px;
+      padding-left: 15px;
+      border: 1px solid #ccc;
+      border-bottom-width: 2px;
+      transition: all 0.3s ease;
+      &:focus {
+        border-color: var(--red-low);
+      }
+      &:valid {
+        border-color: var(--purple-low);
+      }
+    }
+  }
 }
 @media (max-width: 1000px) {
   .MainContainer {
@@ -281,24 +288,28 @@ form {
     padding-right: 5em;
   }
   form {
-		.inputs {
-			.input-box, .nr-box, .str-box, .text-box, .button {
-				margin-bottom: 15px;
-				width: 100%;
-			}
-		}
-	}
+    .inputs {
+      .input-box,
+      .nr-box,
+      .str-box,
+      .text-box,
+      .button {
+        margin-bottom: 15px;
+        width: 100%;
+      }
+    }
+  }
 
   form {
     .inputs {
       overflow-y: scroll;
     }
   }
-	.inputs {
-		&::-webkit-scrollbar {
-			width: 5px;
-		}
-	}
+  .inputs {
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+  }
 }
 
 footer {
@@ -323,20 +334,24 @@ footer {
     .textFooter {
       font-size: small;
     }
-    .floatright{
+    .floatright {
       display: flex;
       justify-content: flex-end;
       align-items: center;
       font-size: small;
-      a{
-        color:white
+      a {
+        color: white;
       }
-      
-      a :hover{
+
+      a :hover {
         color: var(--red);
       }
     }
   }
 }
 
-
+.kastenFlext {
+  display: flex;
+  justify-content: space-around;
+  // margin-left: 2em;
+}
