@@ -145,29 +145,66 @@ h1 {
 }
 
 form {
-  max-width: 700px;
+  max-width: 75%;
   width: 100%;
   .inputs{
     display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
-			margin: 20px 0 12px 0;
+			margin: 2em 0 1em 0;
 
       .input-box{
-        margin-bottom: 15px;
+        margin-bottom: 1.5em;
         width: calc(50% - 20px);
+        .req{
+          display: flex;
+          p{
+            margin-right: 0.5em;
+            margin-bottom: -100%;
+            color: var(--red);
+            font-size: x-large;
+          }
+        }
       }
       .nr-box{
         margin-top: auto;
-        margin-bottom: 15px;
+        margin-bottom: 1.5em;
         width: calc(30% - 40px);
+        .req{
+          display: flex;
+          p{
+            margin-right: 0.5em;
+            margin-bottom: -100%;
+            color: var(--red);
+            font-size: x-large;
+          }
+        }
       }
       .str-box{
-        margin-bottom: 15px;
+        margin-bottom: 1.5em;
         width: 70%;
+        .req{
+          display: flex;
+          p{
+            margin-right: 0.5em;
+            margin-bottom: -100%;
+            color: var(--red);
+            font-size: x-large;
+          }
+        }
       }
       .text-box{
+        margin-bottom: 1.5em;
         width: 100%;
+        .req{
+          display: flex;
+          p{
+            margin-right: 0.5em;
+            margin-bottom: -100%;
+            color: var(--red);
+            font-size: x-large;
+          }
+        }
       }
   }
   .inputs>*:first-child{
