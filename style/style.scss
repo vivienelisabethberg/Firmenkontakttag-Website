@@ -267,38 +267,6 @@ form {
     }
 	}
 }
-@media (max-width: 1000px) {
-  .MainContainer {
-    max-width: 100%;
-    padding-left: 10em;
-    padding-right: 10em;
-  }
-}
-@media (max-width: 670px) {
-  .MainContainer {
-    padding-left: 5em;
-    padding-right: 5em;
-  }
-  form {
-		.inputs {
-			.input-box, .nr-box, .str-box, .text-box, .button {
-				margin-bottom: 15px;
-				width: 100%;
-			}
-		}
-	}
-
-  form {
-    .inputs {
-      overflow-y: scroll;
-    }
-  }
-	.inputs {
-		&::-webkit-scrollbar {
-			width: 5px;
-		}
-	}
-}
 
 footer {
   min-height: 100px;
@@ -334,6 +302,41 @@ footer {
       a :hover{
         color: var(--red);
       }
+    }
+  }
+}
+
+@media (orientation: portrait) {
+  form {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .MainContainer {
+    max-width: 100%;
+    padding-left: 10em;
+    padding-right: 10em;
+  }
+}
+@media (max-width: 768px) {
+  .MainContainer {
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+  form {
+    max-width: 100%;
+    .inputs {
+      overflow-y: scroll;
+      .input-box, .nr-box, .str-box, .text-box, .button {
+        margin-bottom: 15px;
+        width: 100%;
+      }
+    }
+  }
+  .inputs {
+    &::-webkit-scrollbar {
+      width: 5px;
     }
   }
 }

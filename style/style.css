@@ -254,32 +254,6 @@ form .button input:hover {
   height: 100px;
 }
 
-@media (max-width: 1000px) {
-  .MainContainer {
-    max-width: 100%;
-    padding-left: 10em;
-    padding-right: 10em;
-  }
-}
-@media (max-width: 670px) {
-  .MainContainer {
-    padding-left: 5em;
-    padding-right: 5em;
-  }
-
-  form .inputs .input-box, form .inputs .nr-box, form .inputs .str-box, form .inputs .text-box, form .inputs .button {
-    margin-bottom: 15px;
-    width: 100%;
-  }
-
-  form .inputs {
-    overflow-y: scroll;
-  }
-
-  .inputs::-webkit-scrollbar {
-    width: 5px;
-  }
-}
 footer {
   min-height: 100px;
   padding-left: 15em;
@@ -315,6 +289,38 @@ footer .float .floatright a {
 }
 footer .float .floatright a :hover {
   color: var(--red);
+}
+
+@media (orientation: portrait) {
+  form {
+    max-width: 100%;
+  }
+}
+@media (max-width: 1200px) {
+  .MainContainer {
+    max-width: 100%;
+    padding-left: 10em;
+    padding-right: 10em;
+  }
+}
+@media (max-width: 670px) {
+  .MainContainer {
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+
+  form .inputs .input-box, form .inputs .nr-box, form .inputs .str-box, form .inputs .text-box, form .inputs .button {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  form .inputs {
+    overflow-y: scroll;
+  }
+
+  .inputs::-webkit-scrollbar {
+    width: 5px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
