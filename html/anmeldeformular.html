@@ -133,12 +133,37 @@
 
             <div class="text-box">
               <label for="infos">Weitere Informationen für Ihre Bewerber:</label>
-              <textarea id="infos" maxlength="2000" placeholder="Hier könnte noch ein Bewerber-Kontakt oder weitere Anschrift-Informationen stehen.">y</textarea>
+              <textarea id="infos" maxlength="2000" placeholder="Hier könnte noch ein Bewerber-Kontakt oder weitere Anschrift-Informationen stehen."></textarea>
             </div>
 
             <div class="input-box">
               <label for="files">Weitere Dateien (Stellenanzeigen, Flyer, ...)</label>
               <input type="file" id="files" accept=".pdf" multiple>
+            </div>
+            
+            <div class="input-box">
+              <label for="file-org">Anzeigenamen und Reihenfolge der Dateien setzen:</label>
+              <p>Hier können Sie noch Ihren Dateien andere Anzeigenamen und eine Reihenfolge geben. Letzteres machen Sie durch setzen der Zahlen.</p>
+              <ul>
+                <label for="v">file.value (e.g "flyer.pdf)</label>
+                <li>
+                  <div class="input-box">
+                    <input type="text" id="v" maxlength="100" placeholder="Flyer HSRM">
+                  </div>
+                  <div class="input-box">
+                    <input type="number" value="1" pattern="[0-9]{1,}">
+                  </div>
+                </li>
+                <label for="v2">file.value (e.g "stellenanzeige.pdf)</label>
+                <li>
+                  <div class="input-box">
+                    <input type="text" id="v2" maxlength="100" placeholder="Stellenanzeige HSRM">
+                  </div>
+                  <div class="input-box">
+                    <input type="number" value="2" pattern="[0-9]{1,}">
+                  </div>
+                </li>
+              </ul>
             </div>
 
             <div class="button">

@@ -207,6 +207,13 @@ form .input-box label, form .nr-box label, form .str-box label, form .text-box l
   font-weight: 500;
   margin-bottom: 5px;
 }
+form .input-box ul {
+  padding: 0;
+}
+form .input-box ul li {
+  display: flex;
+  justify-content: space-between;
+}
 form .button {
   height: 45px;
   margin: 35px 0;
@@ -242,9 +249,6 @@ form .button input:hover {
 }
 .inputs .input-box input:focus, .inputs .input-box textarea:focus, .inputs .nr-box input:focus, .inputs .nr-box textarea:focus, .inputs .str-box input:focus, .inputs .str-box textarea:focus, .inputs .text-box input:focus, .inputs .text-box textarea:focus {
   border-color: var(--red-low);
-}
-.inputs .input-box input:valid, .inputs .input-box textarea:valid, .inputs .nr-box input:valid, .inputs .nr-box textarea:valid, .inputs .str-box input:valid, .inputs .str-box textarea:valid, .inputs .text-box input:valid, .inputs .text-box textarea:valid {
-  border-color: var(--purple-low);
 }
 .inputs .input-box textarea, .inputs .nr-box textarea, .inputs .str-box textarea, .inputs .text-box textarea {
   height: 100px;

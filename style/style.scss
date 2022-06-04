@@ -217,6 +217,13 @@ form {
         margin-bottom: 5px;
       }
 	}
+  .input-box ul {
+    padding: 0;
+    li {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
   .button {
 		height: 45px;
 		margin: 35px 0;
@@ -253,9 +260,6 @@ form {
 			transition: all 0.3s ease;
 			&:focus {
 				border-color: var(--red-low);
-			}
-			&:valid {
-				border-color: var(--purple-low);
 			}
 		}
     textarea {
