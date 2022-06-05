@@ -447,4 +447,109 @@ footer .float .floatright a :hover {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
+
+.kastenHintergrund {
+  border: 5px;
+  border-color: var(--red);
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.kastenHintergrund p {
+  border-left: 5 em;
+}
+
+.h3Was {
+  font-family: "Flama book";
+  font-size: 19px;
+  margin: 0;
+  color: black;
+}
+
+.h3Antwort {
+  font-family: "Flama book";
+  font-size: 19px;
+  margin: 0;
+  color: #3c3c3c;
+}
+
+h4 {
+  font-family: "Flama book";
+  font-size: 15px;
+  margin: 0;
+  color: black;
+}
+
+h5 {
+  font-family: "Flama book";
+  font-size: 15px;
+  margin: 0;
+  color: var(--textColor);
+}
+
+.firmenInfos {
+  display: -ms-grid;
+  display: grid;
+  padding: 4em 0  4em 0;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  gap: 10px;
+      grid-template-areas: "frage1 antwort1 antwort1" "frage2 antwort2 antwort2" "frage3 antwort3 antwort3" "frage4 antwort4 antwort4";
+}
+
+.frage1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: frage1;
+}
+
+.antwort1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: antwort1;
+}
+
+.frage2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: frage2;
+}
+
+.antwort2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: antwort2;
+}
+
+.frage3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: frage3;
+}
+
+.antwort3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: antwort3;
+}
+
+.frage4 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: frage4;
+}
+
+.antwort4 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: antwort4;
+  text-align: justify;
+}
 /*# sourceMappingURL=style.css.map */

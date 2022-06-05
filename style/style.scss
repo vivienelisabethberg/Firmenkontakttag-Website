@@ -355,3 +355,92 @@ footer {
   justify-content: space-around;
   // margin-left: 2em;
 }
+
+.kastenHintergrund {
+  // background-color:#e1e1e1;
+  border: 5px;
+  border-color: var(--red);
+  padding: 20px;
+  box-sizing: border-box;
+
+  p {
+    border-left: 5 em;
+  }
+}
+
+.h3Was {
+  font-family: "Flama book";
+  font-size: 19px;
+  margin: 0;
+  color: black;
+}
+
+.h3Antwort {
+  font-family: "Flama book";
+  font-size: 19px;
+  margin: 0;
+  color: rgb(60, 60, 60);
+}
+
+h4 {
+  font-family: "Flama book";
+  font-size: 15px;
+  margin: 0;
+  color: black;
+}
+
+h5 {
+  font-family: "Flama book";
+  font-size: 15px;
+  margin: 0;
+  color: var(--textColor);
+}
+
+.firmenInfos {
+  display: grid;
+  padding: 4em 0  4em 0;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 10px;
+  grid-template-areas: 
+  "frage1 antwort1 antwort1"
+  "frage2 antwort2 antwort2"
+  "frage3 antwort3 antwort3"
+  "frage4 antwort4 antwort4"
+  ;
+}
+
+.frage1 {
+  grid-area: frage1;
+  // border-color: black;
+  // border: 5px;
+}
+
+.antwort1 {
+  grid-area: antwort1;
+}
+
+.frage2 {
+  grid-area: frage2;
+}
+
+.antwort2 {
+  grid-area: antwort2;
+}
+
+.frage3 {
+  grid-area: frage3;
+}
+
+.antwort3 {
+  grid-area: antwort3;
+}
+
+.frage4 {
+  grid-area: frage4;
+}
+
+.antwort4 {
+  grid-area: antwort4;
+  text-align: justify;
+}
