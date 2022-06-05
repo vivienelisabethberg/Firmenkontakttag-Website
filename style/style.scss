@@ -27,6 +27,7 @@ body {
   --red-low: #c95258;
   --cardColor: #d4d3d3;
   --textColor: #46413c;
+  // --broschürebutton: #7887f8;
 }
 
 nav {
@@ -352,34 +353,27 @@ footer {
 
 .kastenFlext {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   // margin-left: 2em;
 }
 
+.divlinks {
+  h3 {
+    color: var(--textColor); //warum nicht gehen
+  }
+}
+
 .kastenHintergrund {
-  // background-color:#e1e1e1;
   border: 5px;
-  border-color: var(--red);
-  padding: 20px;
+  border-color: var(--red); //warum nicht geht diese
+  // padding: 20px;
+  // box-shadow: #46413c;
+  // background-clip: var(--textColor);
   box-sizing: border-box;
 
   p {
     border-left: 5 em;
   }
-}
-
-.h3Was {
-  font-family: "Flama book";
-  font-size: 19px;
-  margin: 0;
-  color: black;
-}
-
-.h3Antwort {
-  font-family: "Flama book";
-  font-size: 19px;
-  margin: 0;
-  color: rgb(60, 60, 60);
 }
 
 h4 {
@@ -389,25 +383,26 @@ h4 {
   color: black;
 }
 
-h5 {
-  font-family: "Flama book";
-  font-size: 15px;
-  margin: 0;
-  color: var(--textColor);
-}
+// h5 {
+//   font-family: "Flama book";
+//   font-size: 15px;
+//   margin: 0;
+//   color: var(--textColor);
+// }
 
 .firmenInfos {
   display: grid;
-  padding: 4em 0  4em 0;
+  padding: 4em 0 2em 0;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   gap: 10px;
-  grid-template-areas: 
-  "frage1 antwort1 antwort1"
-  "frage2 antwort2 antwort2"
-  "frage3 antwort3 antwort3"
-  "frage4 antwort4 antwort4"
-  ;
+  justify-content: flex-end;
+  grid-template-areas:
+    "frage1 antwort1 antwort1"
+    "frage2 antwort2 antwort2"
+    "frage3 antwort3 antwort3"
+    "frage4 frage4 frage4"
+    "antwort4 antwort4 antwort4";
 }
 
 .frage1 {
@@ -417,7 +412,9 @@ h5 {
 }
 
 .antwort1 {
+  //warum ist die schrift falsch
   grid-area: antwort1;
+  float: right; //also soll net rechts floaten aber rvejvniuavb
 }
 
 .frage2 {
@@ -438,9 +435,78 @@ h5 {
 
 .frage4 {
   grid-area: frage4;
+  height: 1em;
 }
 
 .antwort4 {
   grid-area: antwort4;
   text-align: justify;
+}
+
+.kontakt {
+  padding: 4em 0 2em 0;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 3em 3em;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1em;
+  grid-template-areas:
+    "kbild kbild"
+    "kdaten kdaten"
+    "kdaten kdaten";
+}
+
+.kbild {
+  background-color: #46413c;
+  grid-area: kbild;
+}
+
+.kdatenflex {
+  display: flex;
+}
+
+.kdaten {
+  grid-area: kdaten;
+  vertical-align: center;     //ich möchte zentrierten Text
+  align-items: center;
+}
+
+.infosundkontakt {          //alles noch nicht responsive    
+  display: flex;
+  gap: 6em;
+}
+
+.emailundbutton {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.kbutton {
+  width: calc(100% / 3 - 20px);
+  input {
+    height: 100%;
+    width: 85%;
+    border-radius: 8px;
+    border: groove;
+    border-color: var(--footerColor);
+    font-weight: 400;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: var(--cardColor);
+    &:hover {
+      background: #7887f8;
+    }
+  }
+}
+
+.webseitelink {
+  a {
+    font-family: "Flama book";
+    font-size: 15px;
+    margin: 0;
+    color: blue;
+  }
 }
