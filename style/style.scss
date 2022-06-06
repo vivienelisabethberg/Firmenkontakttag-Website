@@ -365,13 +365,13 @@ footer {
 }
 
 .kastenHintergrund {
-  border: 5px;
   border-color: var(--red); //warum nicht geht diese
-  padding: 1.5em;
-  box-sizing: border-box;
-  border-radius: 8px;
+  padding: 2em;
+  border-radius: 1em;
+  border-width: 10px;       //warum geht das nicht
   border: groove;
-  border-color: white var(--red-low);
+  border-color: var(--red-low) ;
+  border-style: hidden double hidden double;
 }
 
 h4 {
@@ -447,7 +447,7 @@ h4 {
   display: grid;
   grid-template-columns: 3em 3em;
   grid-template-rows: 1fr 1fr 1fr;
-  gap: 1em;
+  gap: 1.5em;
   grid-template-areas:
     "kbild kbild"
     "kdaten kdaten"
@@ -455,8 +455,10 @@ h4 {
 }
 
 .kbild {
-  background-color: #46413c;
   grid-area: kbild;
+  img {
+    width: 100%;
+  }
 }
 
 .kdatenflex {
@@ -471,7 +473,7 @@ h4 {
 
 .infosundkontakt {          //alles noch nicht responsive    
   display: flex;
-  gap: 6em;
+  gap: 4.5em;
 }
 
 .emailundbutton {
@@ -504,11 +506,11 @@ h4 {
     font-family: "Flama book";
     font-size: 15px;
     margin: 0;
-    color: blue;
+    color: var(--purple);
   }
 }
 
-@media (max-width: 900) {
+@media screen and (max-width: 950) {
   .infosundkontakt {              
     display: block;
   }
@@ -528,7 +530,7 @@ h4 {
   }
 
   .kontakt {
-    padding: 4em 0 2em 0;
+    padding: 4em 0.5em 2em 0;
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 3em 3em;

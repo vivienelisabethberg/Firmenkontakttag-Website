@@ -468,14 +468,13 @@ footer .float .floatright a :hover {
 }
 
 .kastenHintergrund {
-  border: 5px;
   border-color: var(--red);
-  padding: 1.5em;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 8px;
+  padding: 2em;
+  border-radius: 1em;
+  border-width: 10px;
   border: groove;
-  border-color: white var(--red-low);
+  border-color: var(--red-low);
+  border-style: hidden double hidden double;
 }
 
 h4 {
@@ -571,16 +570,19 @@ h4 {
       grid-template-columns: 3em 3em;
   -ms-grid-rows: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
-  gap: 1em;
+  gap: 1.5em;
       grid-template-areas: "kbild kbild" "kdaten kdaten" "kdaten kdaten";
 }
 
 .kbild {
-  background-color: #46413c;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: kbild;
+}
+
+.kbild img {
+  width: 100%;
 }
 
 .kdatenflex {
@@ -605,7 +607,7 @@ h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 6em;
+  gap: 4.5em;
 }
 
 .emailundbutton {
@@ -645,10 +647,10 @@ h4 {
   font-family: "Flama book";
   font-size: 15px;
   margin: 0;
-  color: blue;
+  color: var(--purple);
 }
 
-@media (max-width: 900) {
+@media screen and (max-width: 950) {
   .infosundkontakt {
     display: block;
   }
@@ -664,7 +666,7 @@ h4 {
         grid-template-areas: "frage1 antwort1 antwort1" "frage2 antwort2 antwort2" "frage3 antwort3 antwort3" "frage4 frage4 frage4" "antwort4 antwort4 antwort4";
   }
   .kontakt {
-    padding: 4em 0 2em 0;
+    padding: 4em 0.5em 2em 0;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     display: -ms-grid;
