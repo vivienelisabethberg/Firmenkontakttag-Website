@@ -6,6 +6,7 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 100%;
+  font-family: "Flama";
   scroll-behavior: smooth;
 }
 
@@ -246,7 +247,7 @@ h1 {
 }
 
 form {
-  max-width: 700px;
+  max-width: 75%;
   width: 100%;
 }
 
@@ -259,40 +260,103 @@ form .inputs {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 20px 0 12px 0;
+  margin: 2em 0 1em 0;
 }
 
 form .inputs .input-box {
-  margin-bottom: 15px;
+  margin-bottom: 1.5em;
   width: calc(50% - 20px);
+}
+
+form .inputs .input-box .req {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+form .inputs .input-box .req p {
+  margin-right: 0.5em;
+  margin-bottom: -100%;
+  color: var(--red);
+  font-size: x-large;
 }
 
 form .inputs .nr-box {
   margin-top: auto;
-  margin-bottom: 15px;
+  margin-bottom: 1.5em;
   width: calc(30% - 40px);
 }
 
+form .inputs .nr-box .req {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+form .inputs .nr-box .req p {
+  margin-right: 0.5em;
+  margin-bottom: -100%;
+  color: var(--red);
+  font-size: x-large;
+}
+
 form .inputs .str-box {
-  margin-bottom: 15px;
+  margin-bottom: 1.5em;
   width: 70%;
 }
 
+form .inputs .str-box .req {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+form .inputs .str-box .req p {
+  margin-right: 0.5em;
+  margin-bottom: -100%;
+  color: var(--red);
+  font-size: x-large;
+}
+
 form .inputs .text-box {
+  margin-bottom: 1.5em;
   width: 100%;
+}
+
+form .inputs .text-box .req {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+form .inputs .text-box .req p {
+  margin-right: 0.5em;
+  margin-bottom: -100%;
+  color: var(--red);
+  font-size: x-large;
 }
 
 form .inputs > *:first-child {
   width: -moz-available;
 }
 
-form .input-box label,
-form .nr-box label,
-form .str-box label,
-form .text-box label {
+form .input-box label, form .nr-box label, form .str-box label, form .text-box label {
   display: block;
   font-weight: 500;
   margin-bottom: 5px;
+}
+
+form .input-box ul {
+  padding: 0;
+}
+
+form .input-box ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 form .button {
@@ -320,14 +384,7 @@ form .button input:hover {
   background: var(--red-low);
 }
 
-.inputs .input-box input,
-.inputs .input-box textarea,
-.inputs .nr-box input,
-.inputs .nr-box textarea,
-.inputs .str-box input,
-.inputs .str-box textarea,
-.inputs .text-box input,
-.inputs .text-box textarea {
+.inputs .input-box input, .inputs .input-box textarea, .inputs .nr-box input, .inputs .nr-box textarea, .inputs .str-box input, .inputs .str-box textarea, .inputs .text-box input, .inputs .text-box textarea {
   height: 45px;
   width: 100%;
   outline: none;
@@ -340,55 +397,12 @@ form .button input:hover {
   transition: all 0.3s ease;
 }
 
-.inputs .input-box input:focus,
-.inputs .input-box textarea:focus,
-.inputs .nr-box input:focus,
-.inputs .nr-box textarea:focus,
-.inputs .str-box input:focus,
-.inputs .str-box textarea:focus,
-.inputs .text-box input:focus,
-.inputs .text-box textarea:focus {
+.inputs .input-box input:focus, .inputs .input-box textarea:focus, .inputs .nr-box input:focus, .inputs .nr-box textarea:focus, .inputs .str-box input:focus, .inputs .str-box textarea:focus, .inputs .text-box input:focus, .inputs .text-box textarea:focus {
   border-color: var(--red-low);
 }
 
-.inputs .input-box input:valid,
-.inputs .input-box textarea:valid,
-.inputs .nr-box input:valid,
-.inputs .nr-box textarea:valid,
-.inputs .str-box input:valid,
-.inputs .str-box textarea:valid,
-.inputs .text-box input:valid,
-.inputs .text-box textarea:valid {
-  border-color: var(--purple-low);
-}
-
-@media (max-width: 1000px) {
-  .MainContainer {
-    max-width: 100%;
-    padding-left: 10em;
-    padding-right: 10em;
-  }
-}
-
-@media (max-width: 670px) {
-  .MainContainer {
-    padding-left: 5em;
-    padding-right: 5em;
-  }
-  form .inputs .input-box,
-  form .inputs .nr-box,
-  form .inputs .str-box,
-  form .inputs .text-box,
-  form .inputs .button {
-    margin-bottom: 15px;
-    width: 100%;
-  }
-  form .inputs {
-    overflow-y: scroll;
-  }
-  .inputs::-webkit-scrollbar {
-    width: 5px;
-  }
+.inputs .input-box textarea, .inputs .nr-box textarea, .inputs .str-box textarea, .inputs .text-box textarea {
+  height: 100px;
 }
 
 footer {
@@ -483,7 +497,7 @@ h4 {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-      grid-template-areas: "frage1 antwort1 antwort1" "frage2 antwort2 antwort2" "frage3 antwort3 antwort3" "frage4 frage4 frage4" "antwort4 antwort4 antwort4";
+      grid-template-areas: "frage1 antwort1 antwort1" "frage2 antwort2 antwort2" "frage3 antwort3 antwort3" "frage4 frage4 frage4" "antwort4 antwort4 antwort4";
 }
 
 .frage1 {
@@ -556,7 +570,7 @@ h4 {
   -ms-grid-rows: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
   gap: 1em;
-      grid-template-areas: "kbild kbild" "kdaten kdaten" "kdaten kdaten";
+      grid-template-areas: "kbild kbild" "kdaten kdaten" "kdaten kdaten";
 }
 
 .kbild {
@@ -630,5 +644,39 @@ h4 {
   font-size: 15px;
   margin: 0;
   color: blue;
+}
+
+@media (orientation: portrait) {
+  form {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .MainContainer {
+    max-width: 100%;
+    padding-left: 10em;
+    padding-right: 10em;
+  }
+}
+
+@media (max-width: 768px) {
+  .MainContainer {
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+  form {
+    max-width: 100%;
+  }
+  form .inputs {
+    overflow-y: scroll;
+  }
+  form .inputs .input-box, form .inputs .nr-box, form .inputs .str-box, form .inputs .text-box, form .inputs .button {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  .inputs::-webkit-scrollbar {
+    width: 5px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

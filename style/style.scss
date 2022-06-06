@@ -4,7 +4,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   height: 100%;
-
+  font-family: "Flama";
   scroll-behavior: smooth;
 }
 
@@ -191,42 +191,83 @@ h1 {
 }
 
 form {
-  max-width: 700px;
+  max-width: 75%;
   width: 100%;
   .inputs {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px 0 12px 0;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			margin: 2em 0 1em 0;
 
-    .input-box {
-      margin-bottom: 15px;
-      width: calc(50% - 20px);
-    }
-    .nr-box {
-      margin-top: auto;
-      margin-bottom: 15px;
-      width: calc(30% - 40px);
-    }
-    .str-box {
-      margin-bottom: 15px;
-      width: 70%;
-    }
-    .text-box {
-      width: 100%;
-    }
+      .input-box{
+        margin-bottom: 1.5em;
+        width: calc(50% - 20px);
+        .req{
+          display: flex;
+          p{
+            margin-right: 0.5em;
+            margin-bottom: -100%;
+            color: var(--red);
+            font-size: x-large;
+          }
+        }
+      }
+      .nr-box{
+        margin-top: auto;
+        margin-bottom: 1.5em;
+        width: calc(30% - 40px);
+        .req{
+          display: flex;
+          p{
+            margin-right: 0.5em;
+            margin-bottom: -100%;
+            color: var(--red);
+            font-size: x-large;
+          }
+        }
+      }
+      .str-box{
+        margin-bottom: 1.5em;
+        width: 70%;
+        .req{
+          display: flex;
+          p{
+            margin-right: 0.5em;
+            margin-bottom: -100%;
+            color: var(--red);
+            font-size: x-large;
+          }
+        }
+      }
+      .text-box{
+        margin-bottom: 1.5em;
+        width: 100%;
+        .req{
+          display: flex;
+          p{
+            margin-right: 0.5em;
+            margin-bottom: -100%;
+            color: var(--red);
+            font-size: x-large;
+          }
+        }
+      }
   }
   .inputs > *:first-child {
     width: -moz-available;
   }
-  .input-box,
-  .nr-box,
-  .str-box,
-  .text-box {
-    label {
-      display: block;
-      font-weight: 500;
-      margin-bottom: 5px;
+  .input-box, .nr-box, .str-box, .text-box{
+      label {
+        display: block;
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+	}
+  .input-box ul {
+    padding: 0;
+    li {
+      display: flex;
+      justify-content: space-between;
     }
   }
   .button {
@@ -252,65 +293,25 @@ form {
   }
 }
 .inputs {
-  .input-box,
-  .nr-box,
-  .str-box,
-  .text-box {
-    input,
+	.input-box, .nr-box, .str-box,.text-box{
+		input, textarea {
+			height: 45px;
+			width: 100%;
+			outline: none;
+			font-size: 16px;
+			border-radius: 5px;
+			padding-left: 15px;
+			border: 1px solid #ccc;
+			border-bottom-width: 2px;
+			transition: all 0.3s ease;
+			&:focus {
+				border-color: var(--red-low);
+			}
+		}
     textarea {
-      height: 45px;
-      width: 100%;
-      outline: none;
-      font-size: 16px;
-      border-radius: 5px;
-      padding-left: 15px;
-      border: 1px solid #ccc;
-      border-bottom-width: 2px;
-      transition: all 0.3s ease;
-      &:focus {
-        border-color: var(--red-low);
-      }
-      &:valid {
-        border-color: var(--purple-low);
-      }
+      height: 100px;
     }
-  }
-}
-@media (max-width: 1000px) {
-  .MainContainer {
-    max-width: 100%;
-    padding-left: 10em;
-    padding-right: 10em;
-  }
-}
-@media (max-width: 670px) {
-  .MainContainer {
-    padding-left: 5em;
-    padding-right: 5em;
-  }
-  form {
-    .inputs {
-      .input-box,
-      .nr-box,
-      .str-box,
-      .text-box,
-      .button {
-        margin-bottom: 15px;
-        width: 100%;
-      }
-    }
-  }
-
-  form {
-    .inputs {
-      overflow-y: scroll;
-    }
-  }
-  .inputs {
-    &::-webkit-scrollbar {
-      width: 5px;
-    }
-  }
+	}
 }
 
 footer {
@@ -508,5 +509,39 @@ h4 {
     font-size: 15px;
     margin: 0;
     color: blue;
+  }
+}
+@media (orientation: portrait) {
+  form {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .MainContainer {
+    max-width: 100%;
+    padding-left: 10em;
+    padding-right: 10em;
+  }
+}
+@media (max-width: 768px) {
+  .MainContainer {
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+  form {
+    max-width: 100%;
+    .inputs {
+      overflow-y: scroll;
+      .input-box, .nr-box, .str-box, .text-box, .button {
+        margin-bottom: 15px;
+        width: 100%;
+      }
+    }
+  }
+  .inputs {
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
   }
 }
