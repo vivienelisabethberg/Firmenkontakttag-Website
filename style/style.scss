@@ -367,14 +367,11 @@ footer {
 .kastenHintergrund {
   border: 5px;
   border-color: var(--red); //warum nicht geht diese
-  // padding: 20px;
-  // box-shadow: #46413c;
-  // background-clip: var(--textColor);
+  padding: 1.5em;
   box-sizing: border-box;
-
-  p {
-    border-left: 5 em;
-  }
+  border-radius: 8px;
+  border: groove;
+  border-color: white var(--red-low);
 }
 
 h4 {
@@ -408,14 +405,10 @@ h4 {
 
 .frage1 {
   grid-area: frage1;
-  // border-color: black;
-  // border: 5px;
 }
 
 .antwort1 {
-  //warum ist die schrift falsch
   grid-area: antwort1;
-  float: right; //also soll net rechts floaten aber rvejvniuavb
 }
 
 .frage2 {
@@ -424,6 +417,7 @@ h4 {
 
 .antwort2 {
   grid-area: antwort2;
+  overflow: hidden;
 }
 
 .frage3 {
@@ -432,6 +426,7 @@ h4 {
 
 .antwort3 {
   grid-area: antwort3;
+  overflow: hidden;
 }
 
 .frage4 {
@@ -442,6 +437,7 @@ h4 {
 .antwort4 {
   grid-area: antwort4;
   text-align: justify;
+  overflow: hidden;
 }
 
 .kontakt {
@@ -511,6 +507,40 @@ h4 {
     color: blue;
   }
 }
+
+@media (max-width: 900) {
+  .infosundkontakt {              
+    display: block;
+  }
+
+  .firmenInfos {
+    display: grid;
+    padding: 4em 0 2em 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    grid-template-areas:
+      "frage1 antwort1 antwort1"
+      "frage2 antwort2 antwort2"
+      "frage3 antwort3 antwort3"
+      "frage4 frage4 frage4"
+      "antwort4 antwort4 antwort4";
+  }
+
+  .kontakt {
+    padding: 4em 0 2em 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 3em 3em;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1em;
+    grid-template-areas:
+      "kbild kbild"
+      "kdaten kdaten"
+      "kdaten kdaten";
+  }
+}
+
 @media (orientation: portrait) {
   form {
     max-width: 100%;

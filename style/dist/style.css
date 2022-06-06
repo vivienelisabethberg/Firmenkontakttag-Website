@@ -3,8 +3,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   height: 100%;
   font-family: "Flama";
   scroll-behavior: smooth;
@@ -16,8 +15,7 @@ body {
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   color: var(--textColor);
   font-family: "Flama";
 }
@@ -32,17 +30,10 @@ body {
 }
 
 nav {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  box-sizing: border-box;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   list-style-type: none;
   padding: 0;
   margin-bottom: 55px;
@@ -100,148 +91,89 @@ h1 {
 }
 
 .grid-suchleiste {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-bottom: 20px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .grid-suchleiste .firmenübersicht {
   font-size: 25px;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
 }
-
 .grid-suchleiste .input-grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .grid-suchleiste .input-grid input {
   border: solid 1px var(--textColor);
   padding: 3px;
 }
-
 .grid-suchleiste .input-grid .logo-container {
   padding: 3px;
   border: solid 1px var(--textColor);
   border-left: none;
 }
-
 .grid-suchleiste .input-grid .logo-container img {
   display: block;
 }
 
 .MainContainer {
   min-height: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
   padding-left: 15em;
   padding-right: 15em;
 }
 
 .cards {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -ms-grid;
+  box-sizing: border-box;
   display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
+  grid-template-columns: auto auto;
   gap: 1em;
 }
-
 .cards .card {
   background-color: var(--cardColor);
   padding: 17px;
 }
-
 .cards .card .grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-bottom: 10px;
 }
-
 .cards .card .grid .left {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
 }
-
 .cards .card .grid .right {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  height: -webkit-min-content;
-  height: -moz-min-content;
+  align-items: center;
+  justify-content: flex-end;
   height: min-content;
   gap: 0.5em;
   width: 40%;
 }
-
 .cards .card .grid .right p {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
 }
-
 .cards .card .icon-ausrichtung {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 5px;
 }
-
 .cards .card .link {
   margin-bottom: 10px;
 }
-
 .cards .card .link a {
   color: var(--textColor);
 }
-
 .cards .card .text {
   margin-bottom: 10px;
 }
-
 .cards .card .flex-end {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 5px;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
 }
-
 .cards .card .flex-end a {
   color: var(--textColor);
 }
@@ -250,121 +182,85 @@ form {
   max-width: 75%;
   width: 100%;
 }
-
 form .inputs {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin: 2em 0 1em 0;
 }
-
 form .inputs .input-box {
   margin-bottom: 1.5em;
   width: calc(50% - 20px);
 }
-
 form .inputs .input-box .req {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 form .inputs .input-box .req p {
   margin-right: 0.5em;
   margin-bottom: -100%;
   color: var(--red);
   font-size: x-large;
 }
-
 form .inputs .nr-box {
   margin-top: auto;
   margin-bottom: 1.5em;
   width: calc(30% - 40px);
 }
-
 form .inputs .nr-box .req {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 form .inputs .nr-box .req p {
   margin-right: 0.5em;
   margin-bottom: -100%;
   color: var(--red);
   font-size: x-large;
 }
-
 form .inputs .str-box {
   margin-bottom: 1.5em;
   width: 70%;
 }
-
 form .inputs .str-box .req {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 form .inputs .str-box .req p {
   margin-right: 0.5em;
   margin-bottom: -100%;
   color: var(--red);
   font-size: x-large;
 }
-
 form .inputs .text-box {
   margin-bottom: 1.5em;
   width: 100%;
 }
-
 form .inputs .text-box .req {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 form .inputs .text-box .req p {
   margin-right: 0.5em;
   margin-bottom: -100%;
   color: var(--red);
   font-size: x-large;
 }
-
 form .inputs > *:first-child {
   width: -moz-available;
 }
-
 form .input-box label, form .nr-box label, form .str-box label, form .text-box label {
   display: block;
   font-weight: 500;
   margin-bottom: 5px;
 }
-
 form .input-box ul {
   padding: 0;
 }
-
 form .input-box ul li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 form .button {
   height: 45px;
   margin: 35px 0;
   width: calc(100% / 3 - 20px);
 }
-
 form .button input {
   height: 100%;
   width: 100%;
@@ -375,11 +271,9 @@ form .button input {
   font-weight: 650;
   letter-spacing: 1px;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   background: var(--cardColor);
 }
-
 form .button input:hover {
   background: var(--red-low);
 }
@@ -393,14 +287,11 @@ form .button input:hover {
   padding-left: 15px;
   border: 1px solid #ccc;
   border-bottom-width: 2px;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-
 .inputs .input-box input:focus, .inputs .input-box textarea:focus, .inputs .nr-box input:focus, .inputs .nr-box textarea:focus, .inputs .str-box input:focus, .inputs .str-box textarea:focus, .inputs .text-box input:focus, .inputs .text-box textarea:focus {
   border-color: var(--red-low);
 }
-
 .inputs .input-box textarea, .inputs .nr-box textarea, .inputs .str-box textarea, .inputs .text-box textarea {
   height: 100px;
 }
@@ -416,51 +307,35 @@ footer {
   width: 100%;
   color: white;
 }
-
 footer .float {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  display: -ms-grid;
   display: grid;
   width: 100%;
   padding: 1em;
   padding-left: 2em;
   padding-right: 2em;
 }
-
 footer .float .textFooter {
   font-size: small;
 }
-
 footer .float .floatright {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-end;
+  align-items: center;
   font-size: small;
 }
-
 footer .float .floatright a {
   color: white;
 }
-
 footer .float .floatright a :hover {
   color: var(--red);
 }
 
 .kastenFlext {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .divlinks h3 {
@@ -471,8 +346,7 @@ footer .float .floatright a :hover {
   border: 5px;
   border-color: var(--red);
   padding: 1.5em;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-radius: 8px;
   border: groove;
   border-color: white var(--red-low);
@@ -486,73 +360,47 @@ h4 {
 }
 
 .firmenInfos {
-  display: -ms-grid;
   display: grid;
   padding: 4em 0 2em 0;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
   gap: 10px;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-      grid-template-areas: "frage1 antwort1 antwort1" "frage2 antwort2 antwort2" "frage3 antwort3 antwort3" "frage4 frage4 frage4" "antwort4 antwort4 antwort4";
+  justify-content: flex-end;
+  grid-template-areas: "frage1 antwort1 antwort1" "frage2 antwort2 antwort2" "frage3 antwort3 antwort3" "frage4 frage4 frage4" "antwort4 antwort4 antwort4";
 }
 
 .frage1 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: frage1;
 }
 
 .antwort1 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
   grid-area: antwort1;
 }
 
 .frage2 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: frage2;
 }
 
 .antwort2 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
   grid-area: antwort2;
   overflow: hidden;
 }
 
 .frage3 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
   grid-area: frage3;
 }
 
 .antwort3 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
   grid-area: antwort3;
   overflow: hidden;
 }
 
 .frage4 {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: frage4;
   height: 1em;
 }
 
 .antwort4 {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: antwort4;
   text-align: justify;
   overflow: hidden;
@@ -560,69 +408,44 @@ h4 {
 
 .kontakt {
   padding: 4em 0 2em 0;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -ms-grid;
+  justify-content: flex-end;
+  box-sizing: border-box;
   display: grid;
-  -ms-grid-columns: 3em 3em;
-      grid-template-columns: 3em 3em;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 3em 3em;
+  grid-template-rows: 1fr 1fr 1fr;
   gap: 1em;
-      grid-template-areas: "kbild kbild" "kdaten kdaten" "kdaten kdaten";
+  grid-template-areas: "kbild kbild" "kdaten kdaten" "kdaten kdaten";
 }
 
 .kbild {
   background-color: #46413c;
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: kbild;
 }
 
 .kdatenflex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .kdaten {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: kdaten;
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .infosundkontakt {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 6em;
 }
 
 .emailundbutton {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  box-sizing: border-box;
+  justify-content: space-between;
 }
 
 .kbutton {
   width: calc(100% / 3 - 20px);
 }
-
 .kbutton input {
   height: 100%;
   width: 85%;
@@ -632,11 +455,9 @@ h4 {
   font-weight: 400;
   letter-spacing: 1px;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   background: var(--cardColor);
 }
-
 .kbutton input:hover {
   background: #7887f8;
 }
@@ -652,38 +473,31 @@ h4 {
   .infosundkontakt {
     display: block;
   }
+
   .firmenInfos {
-    display: -ms-grid;
     display: grid;
     padding: 4em 0 2em 0;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-    -ms-grid-rows: auto;
-        grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
     gap: 10px;
-        grid-template-areas: "frage1 antwort1 antwort1" "frage2 antwort2 antwort2" "frage3 antwort3 antwort3" "frage4 frage4 frage4" "antwort4 antwort4 antwort4";
+    grid-template-areas: "frage1 antwort1 antwort1" "frage2 antwort2 antwort2" "frage3 antwort3 antwort3" "frage4 frage4 frage4" "antwort4 antwort4 antwort4";
   }
+
   .kontakt {
     padding: 4em 0 2em 0;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    display: -ms-grid;
+    box-sizing: border-box;
     display: grid;
-    -ms-grid-columns: 3em 3em;
-        grid-template-columns: 3em 3em;
-    -ms-grid-rows: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 3em 3em;
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 1em;
-        grid-template-areas: "kbild kbild" "kdaten kdaten" "kdaten kdaten";
+    grid-template-areas: "kbild kbild" "kdaten kdaten" "kdaten kdaten";
   }
 }
-
 @media (orientation: portrait) {
   form {
     max-width: 100%;
   }
 }
-
 @media (max-width: 1000px) {
   .MainContainer {
     max-width: 100%;
@@ -691,12 +505,12 @@ h4 {
     padding-right: 10em;
   }
 }
-
 @media (max-width: 768px) {
   .MainContainer {
     padding-left: 5em;
     padding-right: 5em;
   }
+
   form {
     max-width: 100%;
   }
@@ -707,8 +521,8 @@ h4 {
     margin-bottom: 15px;
     width: 100%;
   }
+
   .inputs::-webkit-scrollbar {
     width: 5px;
   }
 }
-/*# sourceMappingURL=style.css.map */
