@@ -593,7 +593,7 @@ h4 {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: kdaten;
-  vertical-align: center;
+  text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
