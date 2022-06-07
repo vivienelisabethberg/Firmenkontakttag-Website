@@ -6,16 +6,18 @@ body {
   height: 100%;
   font-family: "Flama";
   scroll-behavior: smooth;
+  color: var(--textColor);
 }
 
 body {
-  background: url("../svg/Gruppe\ 4.svg") 1006px -225px no-repeat;
-  background-size: 50%;
+  position: relative;
+  min-height: 100%;
+  background: url("../svg/Gruppe\ 6.svg") 1000px 0px no-repeat;
+  background-size: 35%;
 }
 
 * {
   box-sizing: border-box;
-  color: var(--textColor);
   font-family: "Flama";
 }
 
@@ -27,95 +29,14 @@ body {
   --red-low: #c95258;
   --cardColor: #d4d3d3;
   --textColor: #46413c;
-  // --broschürebutton: #7887f8;
 }
 
 nav {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style-type: none;
-  padding: 0;
+  padding: 1.5em;
   margin-bottom: 55px;
-}
 
-li {
-  display: inline;
-}
-
-h3 {
-  font-family: "Flama book";
-  font-size: 19px;
-  margin: 0;
-  color: var(--purple);
-}
-
-p {
-  margin: 0;
-}
-
-.HsrmLogo {
-  width: 20%;
-}
-
-h1 {
-  font-family: "Flama medium";
-  font-size: 35px;
-  text-transform: uppercase;
-  color: var(--red);
-  margin: 0;
-  padding-bottom: 10px;
-}
-
-.icon-size-clock {
-  height: 16px;
-}
-
-.icon-size-map-marker {
-  width: 14px;
-}
-
-.icon-size-cards {
-  width: 13%;
-}
-
-.logo-size {
-  max-width: 40%;
-}
-
-.blocksatz {
-  width: 60em;
-  margin-top: 1.5em;
-  margin-bottom: 5.5em;
-  word-spacing: 5px;
-}
-
-.grid-suchleiste {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  align-items: center;
-  .firmenübersicht {
-    font-size: 25px;
-    justify-content: flex-start;
-  }
-
-  .input-grid {
-    display: flex;
-
-    input {
-      border: solid 1px var(--textColor);
-      padding: 3px;
-    }
-    .logo-container {
-      padding: 3px;
-      border: solid 1px var(--textColor);
-      border-left: none;
-      img {
-        display: block;
-      }
-    }
+  img {
+    width: 20%;
   }
 }
 
@@ -126,6 +47,83 @@ h1 {
   align-items: center;
   padding-left: 15em;
   padding-right: 15em;
+  h3 {
+    font-family: "Flama book";
+    font-size: 19px;
+    margin: 0;
+    color: var(--purple);
+  }
+  p {
+    margin: 0;
+  }
+
+  h1 {
+    font-family: "Flama light";
+    font-size: 50px;
+    text-transform: uppercase;
+    color: var(--red);
+    margin: 0;
+    padding-bottom: 10px;
+  }
+
+  .icon-size-clock {
+    height: 16px;
+  }
+
+  .icon-size-map-marker {
+    width: 14px;
+  }
+
+  .icon-size-cards {
+    width: 20px;
+  }
+
+  .blocksatz {
+    max-width: 60em;
+    margin-top: 1.5em;
+    margin-bottom: 5.5em;
+    word-spacing: 5px;
+  }
+}
+
+.grid-suchleiste {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: center;
+  .firmenübersicht {
+    font-size: 25px;
+    color: var(--purple);
+    font-family: "Flama book";
+  }
+
+  .input-grid {
+    display: flex;
+    width: fit-content;
+
+    &:hover {
+      box-shadow: 0px 10px 13px -7px #000000,
+        0px -6px 5px -4px rgba(0, 0, 0, 0.06);
+    }
+
+    input {
+      position: relative;
+      display: inline-block;
+      border: solid 2px var(--purple);
+      color: var(--textColor);
+      padding: 3px;
+    }
+
+    .lupe-container {
+      padding: 3px;
+      border: solid 1px var(--textColor);
+      border-left: none;
+      background-color: var(--purple);
+      img {
+        display: block;
+      }
+    }
+  }
 }
 
 .cards {
@@ -137,13 +135,12 @@ h1 {
   .card {
     background-color: var(--cardColor);
     padding: 17px;
-
     .grid {
       display: flex;
-      justify-content: space-between;
       margin-bottom: 10px;
+
       .left {
-        justify-content: flex-start;
+        margin-right: auto;
       }
 
       .right {
@@ -171,6 +168,9 @@ h1 {
       a {
         color: var(--textColor);
       }
+      a:hover {
+        color: var(--purple);
+      }
     }
 
     .text {
@@ -186,6 +186,10 @@ h1 {
       a {
         color: var(--textColor);
       }
+
+      a :hover {
+        color: var(--purple);
+      }
     }
   }
 }
@@ -193,7 +197,7 @@ h1 {
 form {
   max-width: 75%;
   width: 100%;
-  .inputs {
+  .inputs{
     display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
@@ -253,7 +257,7 @@ form {
         }
       }
   }
-  .inputs > *:first-child {
+  .inputs>*:first-child{
     width: -moz-available;
   }
   .input-box, .nr-box, .str-box, .text-box{
@@ -271,26 +275,26 @@ form {
     }
   }
   .button {
-    height: 45px;
-    margin: 35px 0;
+		height: 45px;
+		margin: 35px 0;
     width: calc(100% / 3 - 20px);
-    input {
-      height: 100%;
-      width: 100%;
-      border-radius: 8px;
-      border: groove;
+		input {
+			height: 100%;
+			width: 100%;
+			border-radius: 8px;
+			border: groove;
       border-color: var(--red);
-      font-size: 18px;
-      font-weight: 650;
-      letter-spacing: 1px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      background: var(--cardColor);
-      &:hover {
-        background: var(--red-low);
-      }
-    }
-  }
+			font-size: 18px;
+			font-weight: 650;
+			letter-spacing: 1px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			background: var(--cardColor);
+			&:hover {
+				background: var(--red-low);
+			}
+		}
+	}
 }
 .inputs {
 	.input-box, .nr-box, .str-box,.text-box{
@@ -319,59 +323,71 @@ footer {
   padding-left: 15em;
   padding-right: 15em;
   padding-top: 1em;
+  padding-bottom: 1em;
   margin-top: 4em;
   background: var(--footerColor);
   position: relative;
   width: 100%;
   color: white;
-  .float {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    display: grid;
-    width: 100%;
-    padding: 1em;
-    padding-left: 2em;
-    padding-right: 2em;
-    .textFooter {
-      font-size: small;
-    }
-    .floatright {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      font-size: small;
-      a {
-        color: white;
-      }
-
-      a :hover {
-        color: var(--red);
-      }
-    }
-  }
-}
-
-.kastenFlext {
   display: flex;
   justify-content: space-between;
-  // margin-left: 2em;
-}
+  align-items: center;
+  bottom: 0;
 
-.divlinks {
-  h3 {
-    color: var(--textColor); //warum nicht gehen
+  .textFooter {
+    font-size: small;
+  }
+
+  .buttonandImpressum {
+    .button {
+      height: 20px;
+      margin-bottom: 5px;
+      width: 100%; 
+      border-radius: 8px;
+      font-size: 10px;
+      font-weight: 650;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: var(--cardColor);
+
+      &:hover {
+        background-color: var(--red-low);
+      }
+    }
+
+    .floatright {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: max-content;
+      font-size: small;
+      width: min-content;
+      a {
+        text-decoration: underline;
+        color: white;
+
+        &:hover {
+          color: var(--red);
+        }
+      }
+    }
   }
 }
 
+//Julias Part an SCSS bzw. Detailuebersichtsseite
+
 .kastenHintergrund {
-  border-color: var(--red); //warum nicht geht diese
-  padding: 2em;
+  padding: 2.5em;
   border-radius: 1em;
-  border-width: 10px;       //warum geht das nicht
-  border: groove;
-  border-color: var(--red-low) ;
+  border-width: 6px;
+  border-color: var(--red-low);
   border-style: hidden double hidden double;
+
+  .kastenFlext {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 h4 {
@@ -379,201 +395,336 @@ h4 {
   font-size: 15px;
   margin: 0;
   color: black;
+  .frage1 {
+    margin: 0%;
+  }
 }
 
-// h5 {
-//   font-family: "Flama book";
-//   font-size: 15px;
-//   margin: 0;
-//   color: var(--textColor);
-// }
+.infosundkontakt {
+  display: flex;
+  gap: 5em;
+  height: min-content;
+}
 
 .firmenInfos {
-  display: grid;
-  padding: 4em 0 2em 0;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  gap: 10px;
   justify-content: flex-end;
+  display: grid;
+  margin: 4em 0 2em 0;
+  height: min-content;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
   grid-template-areas:
     "frage1 antwort1 antwort1"
     "frage2 antwort2 antwort2"
     "frage3 antwort3 antwort3"
     "frage4 frage4 frage4"
     "antwort4 antwort4 antwort4";
-}
 
-.frage1 {
-  grid-area: frage1;
-}
+  .frage1 {
+    grid-area: frage1;
+  }
 
-.antwort1 {
-  grid-area: antwort1;
-}
+  .antwort1 {
+    grid-area: antwort1;
+  }
 
-.frage2 {
-  grid-area: frage2;
-}
+  .frage2 {
+    grid-area: frage2;
+  }
 
-.antwort2 {
-  grid-area: antwort2;
-  overflow: hidden;
-}
+  .antwort2 {
+    grid-area: antwort2;
+    overflow: hidden;
+  }
 
-.frage3 {
-  grid-area: frage3;
-}
+  .frage3 {
+    grid-area: frage3;
+  }
 
-.antwort3 {
-  grid-area: antwort3;
-  overflow: hidden;
-}
+  .antwort3 {
+    grid-area: antwort3;
+    overflow: hidden;
+  }
 
-.frage4 {
-  grid-area: frage4;
-  height: 1em;
-}
+  .frage4 {
+    grid-area: frage4;
+    height: 1em;
+  }
 
-.antwort4 {
-  grid-area: antwort4;
-  text-align: justify;
-  overflow: hidden;
+  .antwort4 {
+    grid-area: antwort4;
+    text-align: justify;
+    overflow: hidden;
+  }
 }
 
 .kontakt {
-  padding: 4em 0 2em 0;
-  justify-content: flex-end;
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 3em 3em;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 1.5em;
-  grid-template-areas:
-    "kbild kbild"
-    "kdaten kdaten"
-    "kdaten kdaten";
-}
-
-.kbild {
-  grid-area: kbild;
+  margin-top: 4em;
+  margin-bottom: 2em;
+  height: max-content;
   img {
-    width: 100%;
+    width: 10em;
+    margin-bottom: 2em;
+  }
+
+  .kdaten {
+    text-align: center;
   }
 }
 
-.kdatenflex {
+.emailundwebsitelink {
   display: flex;
-}
-
-.kdaten {
-  grid-area: kdaten;
-  text-align: center;     //ich möchte zentrierten Text
-  align-items: center;
-}
-
-.infosundkontakt {          //alles noch nicht responsive    
-  display: flex;
-  gap: 4.5em;
-}
-
-.emailundbutton {
-  display: flex;
-  box-sizing: border-box;
   justify-content: space-between;
-}
 
-.kbutton {
-  width: calc(100% / 3 - 20px);
-  input {
-    height: 100%;
-    width: 85%;
-    border-radius: 8px;
-    border: groove;
-    border-color: var(--footerColor);
-    font-weight: 400;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    background: var(--cardColor);
-    &:hover {
-      background: #7887f8;
+  .kemail {
+    font-family: "Flama book";
+    a {
+      color: var(--textColor);
+      font-family: "Flama book";
+    }
+    a:hover {
+      color: var(--purple);
+    }
+  }
+
+  .webseitelink {
+    a {
+      font-family: "Flama book";
+      font-size: 15px;
+      margin: 0;
+      color: var(--purple);
     }
   }
 }
 
-.webseitelink {
-  a {
-    font-family: "Flama book";
+//Media Queries
+
+@media screen and (min-width: 947px) and (max-width: 1240px) {
+  .MainContainer {
+    padding-left: 7em;
+    padding-right: 7em;
+    .icon-size-cards {
+      width: 18px;
+    }
+
+    .blocksatz {
+      font-size: 15px;
+    }
+  }
+
+  footer {
+    padding-left: 7em;
+    padding-right: 7em;
+  }
+
+  .card {
+    padding: 10px;
     font-size: 15px;
-    margin: 0;
-    color: var(--purple);
-  }
-}
-
-@media screen and (max-width: 950) {
-  .infosundkontakt {              
-    display: block;
   }
 
-  .firmenInfos {
-    display: grid;
-    padding: 4em 0 2em 0;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 10px;
-    grid-template-areas:
-      "frage1 antwort1 antwort1"
-      "frage2 antwort2 antwort2"
-      "frage3 antwort3 antwort3"
-      "frage4 frage4 frage4"
-      "antwort4 antwort4 antwort4";
-  }
-
-  .kontakt {
-    padding: 4em 0.5em 2em 0;
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: 3em 3em;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 1em;
-    grid-template-areas:
-      "kbild kbild"
-      "kdaten kdaten"
-      "kdaten kdaten";
-  }
-}
-
-@media (orientation: portrait) {
-  form {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 1000px) {
-  .MainContainer {
-    max-width: 100%;
-    padding-left: 10em;
-    padding-right: 10em;
-  }
-}
-@media (max-width: 768px) {
-  .MainContainer {
-    padding-left: 5em;
-    padding-right: 5em;
-  }
-  form {
-    max-width: 100%;
-    .inputs {
-      overflow-y: scroll;
-      .input-box, .nr-box, .str-box, .text-box, .button {
-        margin-bottom: 15px;
-        width: 100%;
+  .kastenHintergrund {
+    border-style: none;
+    h1 {
+      font-size: 3em;
+    }
+    .infosundkontakt {
+      display: block;
+      .kontakt {
+        display: flex;
+        align-items: center;
+        img {
+          margin-right: 2em;
+          margin-bottom: 0;
+        }
       }
     }
   }
-  .inputs {
-    &::-webkit-scrollbar {
-      width: 5px;
+}
+
+@media screen and (min-width: 633px) and (max-width: 947px) {
+  nav {
+    margin-bottom: 20px;
+  }
+
+  .MainContainer {
+    padding-left: 5em;
+    padding-right: 5em;
+    .icon-size-cards {
+      width: 20px;
+    }
+
+    h1 {
+      font-size: 30px;
+    }
+    h3 {
+      font-size: 16px;
+    }
+
+    .blocksatz {
+      font-size: 14px;
+    }
+  }
+
+  .cards {
+    display: block;
+    .card {
+      font-size: 14px;
+      margin-bottom: 15px;
+      .firmenlogo {
+        width: 60%;
+      }
+    }
+  }
+  footer {
+    min-height: 80px;
+    padding-left: 7em;
+    padding-right: 7em;
+    .textFooter {
+      font-size: 11px;
+    }
+
+    .floatright {
+      font-size: 11px;
+    }
+  }
+
+  .kastenHintergrund {
+    border-style: none;
+    h1 {
+      font-size: 2.5em;
+    }
+    .infosundkontakt {
+      display: block;
+      .kontakt {
+        display: flex;
+        align-items: center;
+        img {
+          margin-right: 2em;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+//HANDY-VERSION
+@media screen and (max-width: 633px) {
+  nav {
+    margin-bottom: 8px;
+    img {
+      width: 40%;
+    }
+  }
+
+  .MainContainer {
+    padding-left: 2em;
+    padding-right: 2em;
+
+    h1 {
+      font-size: 25px;
+    }
+    h3 {
+      font-size: 14px;
+    }
+    .blocksatz {
+      font-size: 13px;
+    }
+    .firmenübersicht {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .grid-suchleiste {
+      display: block;
+      margin-bottom: 10px;
+    }
+    .icon-size-map-marker {
+      width: 10px;
+    }
+    .icon-size-clock {
+      width: 12px;
+    }
+
+    .flex-end {
+      img {
+        margin-top: 3px;
+        width: 13px;
+      }
+    }
+
+    .cards {
+      display: block;
+      .card {
+        font-size: 13px;
+        margin-bottom: 15px;
+        .grid {
+          .left {
+            width: content;
+          }
+        }
+        .icon-size-cards {
+          width: 15px;
+        }
+        .firmenlogo {
+          width: 60%;
+        }
+      }
+    }
+  }
+
+  footer {
+    min-height: 80px;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-top: 2em;
+    .textFooter {
+      font-size: 11px;
+    }
+
+    .floatright {
+      font-size: 11px;
+    }
+  }
+
+  .kastenHintergrund {
+    border-style: none;
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      display: none;
+    }
+    .kastenFlext {
+      display: block;
+    }
+
+    .infosundkontakt {
+      display: block;
+      font-size: 13px;
+      .kontakt {
+        display: flex;
+        align-items: center;
+        img {
+          margin-right: 2em;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .emailundwebsitelink {
+      display: block;
+      h4 {
+        color: var(--textColor);
+        font-size: 13px;
+      }
+      .webseitelink {
+        margin-top: 10px;
+        a {
+          font-size: 13px;
+        }
+      }
     }
   }
 }
