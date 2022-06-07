@@ -183,14 +183,14 @@ form .inputs {
   justify-content: space-between;
   margin: 2em 0 1em 0;
 }
-form .inputs .input-box {
+form .inputs .input-box, form .inputs .input-file {
   margin-bottom: 1.5em;
   width: calc(50% - 20px);
 }
-form .inputs .input-box .req {
+form .inputs .input-box .req, form .inputs .input-file .req {
   display: flex;
 }
-form .inputs .input-box .req p {
+form .inputs .input-box .req p, form .inputs .input-file .req p {
   margin-right: 0.5em;
   margin-bottom: -100%;
   color: var(--red);
@@ -454,6 +454,10 @@ h4 .frage1 {
     font-size: 15px;
   }
 
+  form {
+    min-width: 100%;
+  }
+
   footer {
     padding-left: 7em;
     padding-right: 7em;
@@ -513,6 +517,10 @@ h4 .frage1 {
   }
   .cards .card .firmenlogo {
     width: 60%;
+  }
+
+  form {
+    min-width: 100%;
   }
 
   footer {
@@ -599,6 +607,25 @@ h4 .frage1 {
   }
   .MainContainer .cards .card .firmenlogo {
     width: 60%;
+  }
+
+  form {
+    max-width: 100%;
+  }
+  form .inputs {
+    overflow-y: scroll;
+  }
+  form .inputs .input-box, form .inputs .nr-box, form .inputs .str-box, form .inputs .text-box, form .inputs .button {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .inputs .input-file {
+    margin-bottom: 15px;
+    width: calc(50% - 5px);
+  }
+
+  .inputs::-webkit-scrollbar {
+    width: 5px;
   }
 
   footer {

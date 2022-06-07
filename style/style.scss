@@ -203,7 +203,7 @@ form {
 			justify-content: space-between;
 			margin: 2em 0 1em 0;
 
-      .input-box{
+      .input-box, .input-file{
         margin-bottom: 1.5em;
         width: calc(50% - 20px);
         .req{
@@ -512,6 +512,10 @@ h4 {
     }
   }
 
+  form {
+    min-width: 100%;
+  }
+
   footer {
     padding-left: 7em;
     padding-right: 7em;
@@ -575,6 +579,11 @@ h4 {
       }
     }
   }
+
+  form {
+    min-width: 100%;
+  }
+
   footer {
     min-height: 80px;
     padding-left: 7em;
@@ -669,6 +678,26 @@ h4 {
           width: 60%;
         }
       }
+    }
+  }
+
+  form {
+    max-width: 100%;
+    .inputs {
+      overflow-y: scroll;
+      .input-box, .nr-box, .str-box, .text-box, .button {
+        margin-bottom: 15px;
+        width: 100%;
+      }
+      .input-file {
+        margin-bottom: 15px;
+        width: calc(50% - 5px);
+      }
+    }
+  }
+  .inputs {
+    &::-webkit-scrollbar {
+      width: 5px;
     }
   }
 
