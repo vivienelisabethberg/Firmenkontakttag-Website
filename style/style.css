@@ -4,17 +4,35 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  height: 100%;
   font-family: "Flama";
-  scroll-behavior: smooth;
   color: var(--textColor);
+}
+
+html {
+  height: 100%;
 }
 
 body {
   position: relative;
   min-height: 100%;
-  background: url("../svg/Gruppe 6.svg") 1000px 0px no-repeat;
+  background: url("../svg/Gruppe 6.svg") no-repeat;
   background-size: 35%;
+  background-position: right top;
+}
+body nav {
+  margin: 1.5em;
+  margin-bottom: 55px;
+  position: fixed;
+  width: 20%;
+}
+body nav img {
+  width: 100%;
+  padding-bottom: 1em;
+  padding-right: 0.5em;
+  position: left top;
+  background-color: white;
+  border-style: groove;
+  border-color: gray;
 }
 
 * {
@@ -31,14 +49,6 @@ body {
   --textColor: #46413c;
 }
 
-nav {
-  padding: 1.5em;
-  margin-bottom: 55px;
-}
-nav img {
-  width: 20%;
-}
-
 .MainContainer {
   min-height: 100%;
   box-sizing: border-box;
@@ -46,9 +56,10 @@ nav img {
   align-items: center;
   padding-left: 15em;
   padding-right: 15em;
+  padding-top: 10%;
 }
 .MainContainer h3 {
-  font-family: "Flama book";
+  font-family: "Flama light";
   font-size: 19px;
   margin: 0;
   color: var(--purple);
@@ -89,7 +100,7 @@ nav img {
 .grid-suchleiste .firmenübersicht {
   font-size: 25px;
   color: var(--purple);
-  font-family: "Flama book";
+  font-family: "Flama light";
 }
 .grid-suchleiste .input-grid {
   display: flex;
@@ -310,28 +321,35 @@ footer {
 footer .textFooter {
   font-size: small;
 }
-footer .buttonandImpressum .button {
-  height: 20px;
+footer .buttonandImpressum form {
+  height: 30px;
   margin-bottom: 5px;
+  min-width: 100%;
+}
+footer .buttonandImpressum form input {
+  height: 100%;
   width: 100%;
   border-radius: 8px;
-  font-size: 10px;
+  font-size: 15px;
   font-weight: 650;
   letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.3s ease;
   background: var(--cardColor);
 }
-footer .buttonandImpressum .button:hover {
-  background-color: var(--red-low);
+footer .buttonandImpressum form input:hover {
+  background-color: rgb(85, 85, 85);
+  color: white;
+  border: var(--red);
 }
 footer .buttonandImpressum .floatright {
   display: flex;
   align-items: center;
-  width: 100%;
+  min-width: 100%;
   height: max-content;
   font-size: small;
   width: min-content;
+  justify-content: space-evenly;
 }
 footer .buttonandImpressum .floatright a {
   text-decoration: underline;
@@ -487,25 +505,27 @@ h4 .frage1 {
   }
 }
 @media screen and (min-width: 633px) and (max-width: 947px) {
-  nav {
+  body nav {
     margin-bottom: 20px;
+    width: 30%;
   }
 
   .MainContainer {
     padding-left: 5em;
     padding-right: 5em;
+    padding-top: 20%;
   }
   .MainContainer .icon-size-cards {
     width: 20px;
   }
   .MainContainer h1 {
-    font-size: 30px;
+    font-size: 28px;
   }
   .MainContainer h3 {
-    font-size: 16px;
+    font-size: 14px;
   }
   .MainContainer .blocksatz {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .cards {
@@ -554,16 +574,15 @@ h4 .frage1 {
   }
 }
 @media screen and (max-width: 633px) {
-  nav {
+  body nav {
     margin-bottom: 8px;
-  }
-  nav img {
-    width: 40%;
+    width: 50%;
   }
 
   .MainContainer {
     padding-left: 2em;
     padding-right: 2em;
+    padding-top: 30%;
   }
   .MainContainer h1 {
     font-size: 25px;
@@ -633,9 +652,11 @@ h4 .frage1 {
     padding-left: 2em;
     padding-right: 2em;
     margin-top: 2em;
+    display: block;
   }
   footer .textFooter {
-    font-size: 11px;
+    font-size: 14px;
+    margin-bottom: 2em;
   }
   footer .floatright {
     font-size: 11px;

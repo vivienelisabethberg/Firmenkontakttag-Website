@@ -18,170 +18,170 @@
     </a>
   </nav>
 
-      <div class="MainContainer">
-        <h3>Anmeldeformular Firmenkontakttag</h3>
-        <h1>Zeigen sie der Zukunft wofür sie stehen</h1>
-        <div class="blocksatz">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
-          tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At 
-          vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
-          no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit 
-          amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
-          labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
-          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
-          sanctus est Lorem ipsum dolor sit amet.
-        </div>
-
-        <form>
-          <div class="inputs">
-
-            <div class="input-box">
-              <div class="req">
-                <p>*</p>
-                <label for="firmenname">Firmenname:</label>
-              </div>
-              <input type="text" id="firmenname" name="firmenname" maxlength="200" placeholder="HSRM Engineering GmbH" required>
-            </div>
-
-            <div class="input-box">
-              <div class="req">
-                <p>*</p>
-                <label for="logo">Logo:</label>
-              </div>
-              <input type="file" id="logo" accept=".gif, .jpeg, .png" required>
-            </div>
-
-            <div class="input-box">
-              <div class="req">
-                <p>*</p>
-                <label for="standort">Standorte:</label>
-              </div>
-              <input type="text" id="standort" name="standort" maxlength="300" placeholder="Wiesbaden, München, San Francisco" required>
-            </div>
-
-            <div class="str-box">
-              <div class="req">
-                <p>*</p>
-                <label for="strasse">Adresse:</label>
-              </div>
-              <input type="text" id="strasse" name="strasse" placeholder="Straße" required>
-            </div>
-
-            <div class="nr-box">
-              <input type="text" name="hnummer" title="Bitte eine Hausnummer eingeben" placeholder="Nr." pattern="[0-9]{1,}" required>
-            </div>
-
-            <div class="input-box">
-              <input type="text" name="plz" title="Bitte eine fünfstellige PLZ eingeben" placeholder="PLZ" pattern="[0-9]{5}" required>
-            </div>
-
-            <div class="input-box">
-              <input type="text" name="stadt" placeholder="Stadt" required>
-            </div>
-
-            <div class="input-box">
-              <div class="req">
-                <p>*</p>
-                <label for="email">Email:</label>
-              </div>
-              <input type="email" id="email" title="Bitte eine Email-Adresse eingeben" placeholder="name@hsrm.com" required>
-            </div>
-
-            <div class="input-box">
-              <div class="req">
-                <p>*</p>
-                <label for="homepage">Homepage</label>
-              </div>
-              <input type="url" id="homepage" title="Bitte Ihre Homepage angeben" placeholder="https://hs-rm.de" required>
-            </div>
-
-            <div class="text-box">
-              <div class="req">
-                <p>*</p>
-                <label for="nachricht-kurz">Kurzbeschreibung (maximal 500 Zeichen):</label>
-              </div>
-              <textarea id="nachricht-kurz" maxlength="500" placeholder="Eine Kurzbeschreibung, die in der Übersicht erscheint." required></textarea>
-            </div>
-
-            <div class="text-box">
-              <div class="req">
-                <p>*</p>
-                <label for="nachricht-lang">Langbeschreibung (maximal 2400 Zeichen):</label>
-              </div>
-              <textarea id="nachricht-lang" maxlength="2400" placeholder="Eine längere Beschreibung, die auf Ihrer Detailseite erscheint." required></textarea>
-            </div>
-
-            <div class="input-box">
-              <label for="url-bewerber">URL zu Ihrer Bewerberseite:</label>
-              <input type="url" id="url-bewerber" title="Bitte eine URL angeben" placeholder="https://hs-rm.de/bewerbung">
-            </div>
-
-            <div class="input-box">
-              <label for="email-bewerber">Email für Bewerbungen bei Ihnen:</label>
-              <input type="email" id="email-bewerber" title="Bitte eine Email-Adresse eingeben" maxlength="300" placeholder="bewerbung@hsrm.com">
-            </div>
-
-            <div class="input-box">
-              <label for="tel">Telefonnummer für Bewerbungen bei Ihnen:</label>
-              <input type="tel" id="tel" title="Bitte eine Telefonnumer eingeben" maxlength="100" placeholder="+49 611 12345678">
-            </div>
-
-            <div class="text-box">
-              <label for="infos">Weitere Informationen für Ihre Bewerber:</label>
-              <textarea id="infos" maxlength="2000" placeholder="Hier könnte noch ein Bewerber-Kontakt oder weitere Anschrift-Informationen stehen."></textarea>
-            </div>
-
-            <div class="input-box">
-              <label for="files">Weitere Dateien (Stellenanzeigen, Flyer, ...)</label>
-              <input type="file" id="files" accept=".pdf" multiple>
-            </div>
-            
-            <div class="input-box">
-              <label for="file-org">Anzeigenamen und Reihenfolge der Dateien setzen:</label>
-              <p>Hier können Sie noch Ihren Dateien andere Anzeigenamen und eine Reihenfolge geben. Letzteres machen Sie durch setzen der Zahlen.</p>
-              <ul>
-                <label for="v">file.value (e.g "flyer.pdf)</label>
-                <li>
-                  <div class="input-file">
-                    <input type="text" id="v" maxlength="100" placeholder="Flyer HSRM">
-                  </div>
-                  <div class="input-file">
-                    <input type="number" value="1" pattern="[0-9]{1,}">
-                  </div>
-                </li>
-                <label for="v2">file.value (e.g "stellenanzeige.pdf)</label>
-                <li>
-                  <div class="input-file">
-                    <input type="text" id="v2" maxlength="100" placeholder="Stellenanzeige HSRM">
-                  </div>
-                  <div class="input-file">
-                    <input type="number" value="2" pattern="[0-9]{1,}">
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <div class="button">
-              <input type="submit" value="Absenden">
-            </div>
-          </div>
-        </form>
+    <div class="MainContainer">
+      <h3>Anmeldeformular Firmenkontakttag</h3>
+      <h1>Zeigen sie der Zukunft wofür sie stehen</h1>
+      <div class="blocksatz">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At 
+        vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+        no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit 
+        amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
+        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
+        et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
+        sanctus est Lorem ipsum dolor sit amet.
       </div>
 
-      <footer>
-        <div class="textFooter">
-          <b>Hochschule Rhein Main</b><br />Unter den Eichen 5<br />65195
-          Wiesbaden
-        </div>
-  
-        <div class="buttonandImpressum">
-            <div class="floatright">
-            <a href="#">Impressum</a>
-            <p>&nbsp;|&nbsp;</p>
-            <a href="#">Datenschutz</a>
+      <form>
+        <div class="inputs">
+
+          <div class="input-box">
+            <div class="req">
+              <p>*</p>
+              <label for="firmenname">Firmenname:</label>
+            </div>
+            <input type="text" id="firmenname" name="firmenname" maxlength="200" placeholder="HSRM Engineering GmbH" required>
+          </div>
+
+          <div class="input-box">
+            <div class="req">
+              <p>*</p>
+              <label for="logo">Logo:</label>
+            </div>
+            <input type="file" id="logo" accept=".gif, .jpeg, .png" required>
+          </div>
+
+          <div class="input-box">
+            <div class="req">
+              <p>*</p>
+              <label for="standort">Standorte:</label>
+            </div>
+            <input type="text" id="standort" name="standort" maxlength="300" placeholder="Wiesbaden, München, San Francisco" required>
+          </div>
+
+          <div class="str-box">
+            <div class="req">
+              <p>*</p>
+              <label for="strasse">Adresse:</label>
+            </div>
+            <input type="text" id="strasse" name="strasse" placeholder="Straße" required>
+          </div>
+
+          <div class="nr-box">
+            <input type="text" name="hnummer" title="Bitte eine Hausnummer eingeben" placeholder="Nr." pattern="[0-9]{1,}" required>
+          </div>
+
+          <div class="input-box">
+            <input type="text" name="plz" title="Bitte eine fünfstellige PLZ eingeben" placeholder="PLZ" pattern="[0-9]{5}" required>
+          </div>
+
+          <div class="input-box">
+            <input type="text" name="stadt" placeholder="Stadt" required>
+          </div>
+
+          <div class="input-box">
+            <div class="req">
+              <p>*</p>
+              <label for="email">Email:</label>
+            </div>
+            <input type="email" id="email" title="Bitte eine Email-Adresse eingeben" placeholder="name@hsrm.com" required>
+          </div>
+
+          <div class="input-box">
+            <div class="req">
+              <p>*</p>
+              <label for="homepage">Homepage</label>
+            </div>
+            <input type="url" id="homepage" title="Bitte Ihre Homepage angeben" placeholder="https://hs-rm.de" required>
+          </div>
+
+          <div class="text-box">
+            <div class="req">
+              <p>*</p>
+              <label for="nachricht-kurz">Kurzbeschreibung (maximal 500 Zeichen):</label>
+            </div>
+            <textarea id="nachricht-kurz" maxlength="500" placeholder="Eine Kurzbeschreibung, die in der Übersicht erscheint." required></textarea>
+          </div>
+
+          <div class="text-box">
+            <div class="req">
+              <p>*</p>
+              <label for="nachricht-lang">Langbeschreibung (maximal 2400 Zeichen):</label>
+            </div>
+            <textarea id="nachricht-lang" maxlength="2400" placeholder="Eine längere Beschreibung, die auf Ihrer Detailseite erscheint." required></textarea>
+          </div>
+
+          <div class="input-box">
+            <label for="url-bewerber">URL zu Ihrer Bewerberseite:</label>
+            <input type="url" id="url-bewerber" title="Bitte eine URL angeben" placeholder="https://hs-rm.de/bewerbung">
+          </div>
+
+          <div class="input-box">
+            <label for="email-bewerber">Email für Bewerbungen bei Ihnen:</label>
+            <input type="email" id="email-bewerber" title="Bitte eine Email-Adresse eingeben" maxlength="300" placeholder="bewerbung@hsrm.com">
+          </div>
+
+          <div class="input-box">
+            <label for="tel">Telefonnummer für Bewerbungen bei Ihnen:</label>
+            <input type="tel" id="tel" title="Bitte eine Telefonnumer eingeben" maxlength="100" placeholder="+49 611 12345678">
+          </div>
+
+          <div class="text-box">
+            <label for="infos">Weitere Informationen für Ihre Bewerber:</label>
+            <textarea id="infos" maxlength="2000" placeholder="Hier könnte noch ein Bewerber-Kontakt oder weitere Anschrift-Informationen stehen."></textarea>
+          </div>
+
+          <div class="input-box">
+            <label for="files">Weitere Dateien (Stellenanzeigen, Flyer, ...)</label>
+            <input type="file" id="files" accept=".pdf" multiple>
+          </div>
+          
+          <div class="input-box">
+            <label for="file-org">Anzeigenamen und Reihenfolge der Dateien setzen:</label>
+            <p>Hier können Sie noch Ihren Dateien andere Anzeigenamen und eine Reihenfolge geben. Letzteres machen Sie durch setzen der Zahlen.</p>
+            <ul>
+              <label for="v">file.value (e.g "flyer.pdf")</label>
+              <li>
+                <div class="input-file">
+                  <input type="text" id="v" maxlength="100" placeholder="Flyer HSRM">
+                </div>
+                <div class="input-file">
+                  <input type="number" value="1" pattern="[0-9]{1,}">
+                </div>
+              </li>
+              <label for="v2">file.value (e.g "stellenanzeige.pdf")</label>
+              <li>
+                <div class="input-file">
+                  <input type="text" id="v2" maxlength="100" placeholder="Stellenanzeige HSRM">
+                </div>
+                <div class="input-file">
+                  <input type="number" value="2" pattern="[0-9]{1,}">
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="button">
+            <input type="submit" value="Absenden">
           </div>
         </div>
-  
-      </footer>
-  </body>
+      </form>
+    </div>
+
+    <footer class="footerSignIn">
+      <div class="textFooter">
+        <b>Hochschule Rhein Main</b><br />Unter den Eichen 5<br />65195
+        Wiesbaden
+      </div>
+
+      <div class="buttonandImpressum">
+          <div class="floatright">
+          <a href="#">Impressum</a>
+          <p>&nbsp;|&nbsp;</p>
+          <a href="#">Datenschutz</a>
+        </div>
+      </div>
+
+    </footer>
+</body>
 </html>

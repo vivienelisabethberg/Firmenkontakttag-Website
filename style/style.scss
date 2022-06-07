@@ -3,17 +3,36 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  height: 100%;
   font-family: "Flama";
-  scroll-behavior: smooth;
   color: var(--textColor);
+}
+html {
+  height: 100%;
 }
 
 body {
   position: relative;
   min-height: 100%;
-  background: url("../svg/Gruppe\ 6.svg") 1000px 0px no-repeat;
+  background: url("../svg/Gruppe\ 6.svg") no-repeat;
   background-size: 35%;
+  background-position: right top;
+
+  nav {
+    margin: 1.5em;
+    margin-bottom: 55px;
+    position: fixed;
+    width: 20%;
+  
+    img {
+      width: 100%;
+      padding-bottom: 1em;
+      padding-right: 0.5em;
+      position: left top;
+      background-color: white;
+      border-style: groove;
+      border-color: gray;
+    }
+  }
 }
 
 * {
@@ -31,14 +50,6 @@ body {
   --textColor: #46413c;
 }
 
-nav {
-  padding: 1.5em;
-  margin-bottom: 55px;
-
-  img {
-    width: 20%;
-  }
-}
 
 .MainContainer {
   min-height: 100%;
@@ -47,8 +58,9 @@ nav {
   align-items: center;
   padding-left: 15em;
   padding-right: 15em;
+  padding-top: 10%;
   h3 {
-    font-family: "Flama book";
+    font-family: "Flama light";
     font-size: 19px;
     margin: 0;
     color: var(--purple);
@@ -94,7 +106,7 @@ nav {
   .firmenübersicht {
     font-size: 25px;
     color: var(--purple);
-    font-family: "Flama book";
+    font-family: "Flama light";
   }
 
   .input-grid {
@@ -199,63 +211,63 @@ form {
   width: 100%;
   .inputs{
     display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			margin: 2em 0 1em 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 2em 0 1em 0;
 
-      .input-box, .input-file{
-        margin-bottom: 1.5em;
-        width: calc(50% - 20px);
-        .req{
-          display: flex;
-          p{
-            margin-right: 0.5em;
-            margin-bottom: -100%;
-            color: var(--red);
-            font-size: x-large;
-          }
+    .input-box, .input-file{
+      margin-bottom: 1.5em;
+      width: calc(50% - 20px);
+      .req{
+        display: flex;
+        p{
+          margin-right: 0.5em;
+          margin-bottom: -100%;
+          color: var(--red);
+          font-size: x-large;
         }
       }
-      .nr-box{
-        margin-top: auto;
-        margin-bottom: 1.5em;
-        width: calc(30% - 40px);
-        .req{
-          display: flex;
-          p{
-            margin-right: 0.5em;
-            margin-bottom: -100%;
-            color: var(--red);
-            font-size: x-large;
-          }
+    }
+    .nr-box{
+      margin-top: auto;
+      margin-bottom: 1.5em;
+      width: calc(30% - 40px);
+      .req{
+        display: flex;
+        p{
+          margin-right: 0.5em;
+          margin-bottom: -100%;
+          color: var(--red);
+          font-size: x-large;
         }
       }
-      .str-box{
-        margin-bottom: 1.5em;
-        width: 70%;
-        .req{
-          display: flex;
-          p{
-            margin-right: 0.5em;
-            margin-bottom: -100%;
-            color: var(--red);
-            font-size: x-large;
-          }
+    }
+    .str-box{
+      margin-bottom: 1.5em;
+      width: 70%;
+      .req{
+        display: flex;
+        p{
+          margin-right: 0.5em;
+          margin-bottom: -100%;
+          color: var(--red);
+          font-size: x-large;
         }
       }
-      .text-box{
-        margin-bottom: 1.5em;
-        width: 100%;
-        .req{
-          display: flex;
-          p{
-            margin-right: 0.5em;
-            margin-bottom: -100%;
-            color: var(--red);
-            font-size: x-large;
-          }
+    }
+    .text-box{
+      margin-bottom: 1.5em;
+      width: 100%;
+      .req{
+        display: flex;
+        p{
+          margin-right: 0.5em;
+          margin-bottom: -100%;
+          color: var(--red);
+          font-size: x-large;
         }
       }
+    }
   }
   .inputs>*:first-child{
     width: -moz-available;
@@ -339,30 +351,36 @@ footer {
   }
 
   .buttonandImpressum {
-    .button {
-      height: 20px;
+    form {
+      height: 30px;
       margin-bottom: 5px;
-      width: 100%; 
-      border-radius: 8px;
-      font-size: 10px;
-      font-weight: 650;
-      letter-spacing: 1px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      background: var(--cardColor);
+      min-width: 100%;
+      input {
+        height: 100%;
+        width: 100%;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 650;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: var(--cardColor);
 
-      &:hover {
-        background-color: var(--red-low);
+        &:hover {
+          background-color: rgb(85, 85, 85);
+          color: white;
+        }
       }
     }
 
     .floatright {
       display: flex;
       align-items: center;
-      width: 100%;
+      min-width: 100%;
       height: max-content;
       font-size: small;
       width: min-content;
+      justify-content: space-evenly;
       a {
         text-decoration: underline;
         color: white;
@@ -375,7 +393,6 @@ footer {
   }
 }
 
-//Julias Part an SCSS bzw. Detailuebersichtsseite
 
 .kastenHintergrund {
   padding: 2.5em;
@@ -546,26 +563,29 @@ h4 {
 }
 
 @media screen and (min-width: 633px) and (max-width: 947px) {
-  nav {
-    margin-bottom: 20px;
+  body {
+    nav {
+      margin-bottom: 20px;
+      width: 30%;
+    }
   }
-
   .MainContainer {
     padding-left: 5em;
     padding-right: 5em;
+    padding-top: 20%;
     .icon-size-cards {
       width: 20px;
     }
 
     h1 {
-      font-size: 30px;
+      font-size: 28px;
     }
     h3 {
-      font-size: 16px;
+      font-size: 14px;
     }
 
     .blocksatz {
-      font-size: 14px;
+      font-size: 12px;
     }
   }
 
@@ -618,17 +638,17 @@ h4 {
 
 //HANDY-VERSION
 @media screen and (max-width: 633px) {
-  nav {
-    margin-bottom: 8px;
-    img {
-      width: 40%;
+  body {  
+    nav {
+      margin-bottom: 8px;
+      width: 50%;
     }
   }
 
   .MainContainer {
     padding-left: 2em;
     padding-right: 2em;
-
+    padding-top: 30%;
     h1 {
       font-size: 25px;
     }
@@ -706,8 +726,10 @@ h4 {
     padding-left: 2em;
     padding-right: 2em;
     margin-top: 2em;
+    display: block;
     .textFooter {
-      font-size: 11px;
+      font-size: 14px;
+      margin-bottom: 2em;
     }
 
     .floatright {
