@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style.css" />
+    <script defer src="../javaScript/anmeldeformular.js" ></script>
     <title>Ihre Anmeldung beim Firmenkontakttag</title>
 </head>
 
@@ -32,7 +33,7 @@
         sanctus est Lorem ipsum dolor sit amet.
       </div>
 
-      <form>
+      <form id="formId">
         <div class="inputs">
 
           <div class="input-box">
@@ -40,7 +41,7 @@
               <p>*</p>
               <label for="firmenname">Firmenname:</label>
             </div>
-            <input type="text" id="firmenname" name="firmenname" maxlength="200" placeholder="HSRM Engineering GmbH" required>
+            <input type="text" id="firmenname" name="firmenname" maxlength="200" placeholder="HSRM Engineering GmbH" >
           </div>
 
           <div class="input-box">
@@ -48,7 +49,7 @@
               <p>*</p>
               <label for="logo">Logo:</label>
             </div>
-            <input type="file" id="logo" accept=".gif, .jpeg, .png" required>
+            <input type="file" id="logo" accept=".gif, .jpeg, .png" >
           </div>
 
           <div class="input-box">
@@ -56,7 +57,7 @@
               <p>*</p>
               <label for="standort">Standorte:</label>
             </div>
-            <input type="text" id="standort" name="standort" maxlength="300" placeholder="Wiesbaden, München, San Francisco" required>
+            <input type="text" id="standort" name="standort" maxlength="300" placeholder="Wiesbaden, München, San Francisco" >
           </div>
 
           <div class="str-box">
@@ -64,19 +65,19 @@
               <p>*</p>
               <label for="strasse">Adresse:</label>
             </div>
-            <input type="text" id="strasse" name="strasse" placeholder="Straße" required>
+            <input type="text" id="strasse" name="strasse" placeholder="Straße" >
           </div>
 
           <div class="nr-box">
-            <input type="text" name="hnummer" title="Bitte eine Hausnummer eingeben" placeholder="Nr." pattern="[0-9]{1,}" required>
+            <input type="text" name="hnummer" title="Bitte eine Hausnummer eingeben" placeholder="Nr." pattern="[0-9]{1,}" >
           </div>
 
           <div class="input-box">
-            <input type="text" name="plz" title="Bitte eine fünfstellige PLZ eingeben" placeholder="PLZ" pattern="[0-9]{5}" required>
+            <input type="text" name="plz" title="Bitte eine fünfstellige PLZ eingeben" placeholder="PLZ" pattern="[0-9]{5}" >
           </div>
 
           <div class="input-box">
-            <input type="text" name="stadt" placeholder="Stadt" required>
+            <input type="text" name="stadt" placeholder="Stadt" >
           </div>
 
           <div class="input-box">
@@ -84,7 +85,8 @@
               <p>*</p>
               <label for="email">Email:</label>
             </div>
-            <input type="email" id="email" title="Bitte eine Email-Adresse eingeben" placeholder="name@hsrm.com" required>
+            <input type="email" id="email" title="Bitte eine Email-Adresse eingeben" placeholder="name@hsrm.com" >
+
           </div>
 
           <div class="input-box">
@@ -92,7 +94,7 @@
               <p>*</p>
               <label for="homepage">Homepage</label>
             </div>
-            <input type="url" id="homepage" title="Bitte Ihre Homepage angeben" placeholder="https://hs-rm.de" required>
+            <input type="url" id="homepage" title="Bitte Ihre Homepage angeben" placeholder="https://hs-rm.de" >
           </div>
 
           <div class="text-box">
@@ -100,7 +102,7 @@
               <p>*</p>
               <label for="nachricht-kurz">Kurzbeschreibung (maximal 500 Zeichen):</label>
             </div>
-            <textarea id="nachricht-kurz" maxlength="500" placeholder="Eine Kurzbeschreibung, die in der Übersicht erscheint." required></textarea>
+            <textarea id="nachricht-kurz" maxlength="500" placeholder="Eine Kurzbeschreibung, die in der Übersicht erscheint." ></textarea>
           </div>
 
           <div class="text-box">
@@ -108,7 +110,7 @@
               <p>*</p>
               <label for="nachricht-lang">Langbeschreibung (maximal 2400 Zeichen):</label>
             </div>
-            <textarea id="nachricht-lang" maxlength="2400" placeholder="Eine längere Beschreibung, die auf Ihrer Detailseite erscheint." required></textarea>
+            <textarea id="nachricht-lang" maxlength="2400" placeholder="Eine längere Beschreibung, die auf Ihrer Detailseite erscheint." ></textarea>
           </div>
 
           <div class="input-box">
@@ -161,7 +163,9 @@
             </ul>
           </div>
 
-          <div class="button">
+          <div class="error"></div>
+
+          <div class="button" id="submitButton">
             <input type="submit" value="Absenden">
           </div>
         </div>

@@ -3,7 +3,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Flama";
   color: var(--textColor);
 }
@@ -19,12 +20,14 @@ body {
   background-size: 35%;
   background-position: right top;
 }
+
 body nav {
   margin: 1.5em;
   margin-bottom: 55px;
   position: fixed;
   width: 20%;
 }
+
 body nav img {
   width: 100%;
   padding-bottom: 1em;
@@ -36,7 +39,8 @@ body nav img {
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Flama";
 }
 
@@ -51,22 +55,30 @@ body nav img {
 
 .MainContainer {
   min-height: 100%;
-  box-sizing: border-box;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-left: 15em;
   padding-right: 15em;
   padding-top: 10%;
 }
+
 .MainContainer h3 {
   font-family: "Flama light";
   font-size: 19px;
   margin: 0;
   color: var(--purple);
 }
+
 .MainContainer p {
   margin: 0;
 }
+
 .MainContainer h1 {
   font-family: "Flama light";
   font-size: 50px;
@@ -75,15 +87,19 @@ body nav img {
   margin: 0;
   padding-bottom: 10px;
 }
+
 .MainContainer .icon-size-clock {
   height: 16px;
 }
+
 .MainContainer .icon-size-map-marker {
   width: 14px;
 }
+
 .MainContainer .icon-size-cards {
   width: 20px;
 }
+
 .MainContainer .blocksatz {
   max-width: 60em;
   margin-top: 1.5em;
@@ -92,23 +108,33 @@ body nav img {
 }
 
 .grid-suchleiste {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 20px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .grid-suchleiste .firmenübersicht {
   font-size: 25px;
   color: var(--purple);
   font-family: "Flama light";
 }
+
 .grid-suchleiste .input-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
-.grid-suchleiste .input-grid:hover {
-  box-shadow: 0px 10px 13px -7px #000000, 0px -6px 5px -4px rgba(0, 0, 0, 0.06);
-}
+
 .grid-suchleiste .input-grid input {
   position: relative;
   display: inline-block;
@@ -116,70 +142,115 @@ body nav img {
   color: var(--textColor);
   padding: 3px;
 }
+
 .grid-suchleiste .input-grid .lupe-container {
   padding: 3px;
   border: solid 1px var(--textColor);
   border-left: none;
   background-color: var(--purple);
 }
+
 .grid-suchleiste .input-grid .lupe-container img {
   display: block;
 }
 
+.grid-suchleiste .input-grid .cancel {
+  background-color: var(--purple);
+  outline: none;
+  margin-left: 5px;
+}
+
 .cards {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: auto auto;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
   gap: 1em;
 }
+
 .cards .card {
   background-color: var(--cardColor);
   padding: 17px;
 }
+
 .cards .card .grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 10px;
 }
+
 .cards .card .grid .left {
   margin-right: auto;
 }
+
 .cards .card .grid .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: -webkit-min-content;
+  height: -moz-min-content;
   height: min-content;
   gap: 0.5em;
   width: 40%;
 }
+
 .cards .card .grid .right p {
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
+
 .cards .card .icon-ausrichtung {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 5px;
 }
+
 .cards .card .link {
   margin-bottom: 10px;
 }
+
 .cards .card .link a {
   color: var(--textColor);
 }
+
 .cards .card .link a:hover {
   color: var(--purple);
 }
+
 .cards .card .text {
   margin-bottom: 10px;
 }
+
 .cards .card .flex-end {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 5px;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
+
 .cards .card .flex-end a {
   color: var(--textColor);
 }
+
 .cards .card .flex-end a :hover {
   color: var(--purple);
 }
@@ -188,85 +259,121 @@ form {
   max-width: 75%;
   width: 100%;
 }
+
 form .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 2em 0 1em 0;
 }
+
 form .inputs .input-box, form .inputs .input-file {
   margin-bottom: 1.5em;
   width: calc(50% - 20px);
 }
+
 form .inputs .input-box .req, form .inputs .input-file .req {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 form .inputs .input-box .req p, form .inputs .input-file .req p {
   margin-right: 0.5em;
   margin-bottom: -100%;
   color: var(--red);
   font-size: x-large;
 }
+
 form .inputs .nr-box {
   margin-top: auto;
   margin-bottom: 1.5em;
   width: calc(30% - 40px);
 }
+
 form .inputs .nr-box .req {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 form .inputs .nr-box .req p {
   margin-right: 0.5em;
   margin-bottom: -100%;
   color: var(--red);
   font-size: x-large;
 }
+
 form .inputs .str-box {
   margin-bottom: 1.5em;
   width: 70%;
 }
+
 form .inputs .str-box .req {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 form .inputs .str-box .req p {
   margin-right: 0.5em;
   margin-bottom: -100%;
   color: var(--red);
   font-size: x-large;
 }
+
 form .inputs .text-box {
   margin-bottom: 1.5em;
   width: 100%;
 }
+
 form .inputs .text-box .req {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 form .inputs .text-box .req p {
   margin-right: 0.5em;
   margin-bottom: -100%;
   color: var(--red);
   font-size: x-large;
 }
+
 form .inputs > *:first-child {
   width: -moz-available;
 }
+
 form .input-box label, form .nr-box label, form .str-box label, form .text-box label {
   display: block;
   font-weight: 500;
   margin-bottom: 5px;
 }
+
 form .input-box ul {
   padding: 0;
 }
+
 form .input-box ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 form .button {
   height: 45px;
   margin: 35px 0;
-  width: calc(33.3333333333% - 20px);
+  width: calc(100% / 3 - 20px);
 }
+
 form .button input {
   height: 100%;
   width: 100%;
@@ -277,9 +384,11 @@ form .button input {
   font-weight: 650;
   letter-spacing: 1px;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   background: var(--cardColor);
 }
+
 form .button input:hover {
   background: var(--red-low);
 }
@@ -293,11 +402,14 @@ form .button input:hover {
   padding-left: 15px;
   border: 1px solid #ccc;
   border-bottom-width: 2px;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+
 .inputs .input-box input:focus, .inputs .input-box textarea:focus, .inputs .nr-box input:focus, .inputs .nr-box textarea:focus, .inputs .str-box input:focus, .inputs .str-box textarea:focus, .inputs .text-box input:focus, .inputs .text-box textarea:focus {
   border-color: var(--red-low);
 }
+
 .inputs .input-box textarea, .inputs .nr-box textarea, .inputs .str-box textarea, .inputs .text-box textarea {
   height: 100px;
 }
@@ -313,19 +425,28 @@ footer {
   position: relative;
   width: 100%;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   bottom: 0;
 }
+
 footer .textFooter {
   font-size: small;
 }
+
 footer .buttonandImpressum form {
   height: 30px;
   margin-bottom: 5px;
   min-width: 100%;
 }
+
 footer .buttonandImpressum form input {
   height: 100%;
   width: 100%;
@@ -334,27 +455,41 @@ footer .buttonandImpressum form input {
   font-weight: 650;
   letter-spacing: 1px;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   background: var(--cardColor);
 }
+
 footer .buttonandImpressum form input:hover {
-  background-color: rgb(85, 85, 85);
+  background-color: #555555;
   color: white;
-  border: var(--red);
 }
+
 footer .buttonandImpressum .floatright {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   font-size: small;
+  width: -webkit-min-content;
+  width: -moz-min-content;
   width: min-content;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
+
 footer .buttonandImpressum .floatright a {
   text-decoration: underline;
   color: white;
 }
+
 footer .buttonandImpressum .floatright a:hover {
   color: var(--red);
 }
@@ -366,9 +501,14 @@ footer .buttonandImpressum .floatright a:hover {
   border-color: var(--red-low);
   border-style: hidden double hidden double;
 }
+
 .kastenHintergrund .kastenFlext {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 h4 {
@@ -377,50 +517,90 @@ h4 {
   margin: 0;
   color: black;
 }
+
 h4 .frage1 {
   margin: 0%;
 }
 
 .infosundkontakt {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 5em;
+  height: -webkit-min-content;
+  height: -moz-min-content;
   height: min-content;
 }
 
 .firmenInfos {
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  display: -ms-grid;
   display: grid;
   margin: 4em 0 2em 0;
+  height: -webkit-min-content;
+  height: -moz-min-content;
   height: min-content;
-  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
-  grid-template-areas: "frage1 antwort1 antwort1" "frage2 antwort2 antwort2" "frage3 antwort3 antwort3" "frage4 frage4 frage4" "antwort4 antwort4 antwort4";
+      grid-template-areas: "frage1 antwort1 antwort1" "frage2 antwort2 antwort2" "frage3 antwort3 antwort3" "frage4 frage4 frage4" "antwort4 antwort4 antwort4";
 }
+
 .firmenInfos .frage1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: frage1;
 }
+
 .firmenInfos .antwort1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
   grid-area: antwort1;
 }
+
 .firmenInfos .frage2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: frage2;
 }
+
 .firmenInfos .antwort2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
   grid-area: antwort2;
   overflow: hidden;
 }
+
 .firmenInfos .frage3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: frage3;
 }
+
 .firmenInfos .antwort3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
   grid-area: antwort3;
   overflow: hidden;
 }
+
 .firmenInfos .frage4 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: frage4;
   height: 1em;
 }
+
 .firmenInfos .antwort4 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: antwort4;
   text-align: justify;
   overflow: hidden;
@@ -429,30 +609,42 @@ h4 .frage1 {
 .kontakt {
   margin-top: 4em;
   margin-bottom: 2em;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
 }
+
 .kontakt img {
   width: 10em;
   margin-bottom: 2em;
 }
+
 .kontakt .kdaten {
   text-align: center;
 }
 
 .emailundwebsitelink {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 .emailundwebsitelink .kemail {
   font-family: "Flama book";
 }
+
 .emailundwebsitelink .kemail a {
   color: var(--textColor);
   font-family: "Flama book";
 }
+
 .emailundwebsitelink .kemail a:hover {
   color: var(--purple);
 }
+
 .emailundwebsitelink .webseitelink a {
   font-family: "Flama book";
   font-size: 15px;
@@ -471,21 +663,17 @@ h4 .frage1 {
   .MainContainer .blocksatz {
     font-size: 15px;
   }
-
   form {
     min-width: 100%;
   }
-
   footer {
     padding-left: 7em;
     padding-right: 7em;
   }
-
   .card {
     padding: 10px;
     font-size: 15px;
   }
-
   .kastenHintergrund {
     border-style: none;
   }
@@ -496,20 +684,24 @@ h4 .frage1 {
     display: block;
   }
   .kastenHintergrund .infosundkontakt .kontakt {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .kastenHintergrund .infosundkontakt .kontakt img {
     margin-right: 2em;
     margin-bottom: 0;
   }
 }
+
 @media screen and (min-width: 633px) and (max-width: 947px) {
   body nav {
     margin-bottom: 20px;
     width: 30%;
   }
-
   .MainContainer {
     padding-left: 5em;
     padding-right: 5em;
@@ -527,7 +719,6 @@ h4 .frage1 {
   .MainContainer .blocksatz {
     font-size: 12px;
   }
-
   .cards {
     display: block;
   }
@@ -538,11 +729,9 @@ h4 .frage1 {
   .cards .card .firmenlogo {
     width: 60%;
   }
-
   form {
     min-width: 100%;
   }
-
   footer {
     min-height: 80px;
     padding-left: 7em;
@@ -554,7 +743,6 @@ h4 .frage1 {
   footer .floatright {
     font-size: 11px;
   }
-
   .kastenHintergrund {
     border-style: none;
   }
@@ -565,20 +753,24 @@ h4 .frage1 {
     display: block;
   }
   .kastenHintergrund .infosundkontakt .kontakt {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .kastenHintergrund .infosundkontakt .kontakt img {
     margin-right: 2em;
     margin-bottom: 0;
   }
 }
+
 @media screen and (max-width: 633px) {
   body nav {
     margin-bottom: 8px;
     width: 50%;
   }
-
   .MainContainer {
     padding-left: 2em;
     padding-right: 2em;
@@ -627,7 +819,6 @@ h4 .frage1 {
   .MainContainer .cards .card .firmenlogo {
     width: 60%;
   }
-
   form {
     max-width: 100%;
   }
@@ -642,11 +833,9 @@ h4 .frage1 {
     margin-bottom: 15px;
     width: calc(50% - 5px);
   }
-
   .inputs::-webkit-scrollbar {
     width: 5px;
   }
-
   footer {
     min-height: 80px;
     padding-left: 2em;
@@ -661,7 +850,6 @@ h4 .frage1 {
   footer .floatright {
     font-size: 11px;
   }
-
   .kastenHintergrund {
     border-style: none;
   }
@@ -679,8 +867,12 @@ h4 .frage1 {
     font-size: 13px;
   }
   .kastenHintergrund .infosundkontakt .kontakt {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .kastenHintergrund .infosundkontakt .kontakt img {
     margin-right: 2em;
@@ -700,5 +892,4 @@ h4 .frage1 {
     font-size: 13px;
   }
 }
-
 /*# sourceMappingURL=style.css.map */

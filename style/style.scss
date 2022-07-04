@@ -113,11 +113,6 @@ body {
     display: flex;
     width: fit-content;
 
-    &:hover {
-      box-shadow: 0px 10px 13px -7px #000000,
-        0px -6px 5px -4px rgba(0, 0, 0, 0.06);
-    }
-
     input {
       position: relative;
       display: inline-block;
@@ -134,6 +129,12 @@ body {
       img {
         display: block;
       }
+    }
+
+    .cancel{
+      background-color: var(--purple);
+      outline: none;
+      margin-left: 5px;
     }
   }
 }
