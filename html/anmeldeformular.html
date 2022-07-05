@@ -32,7 +32,7 @@
         et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
         sanctus est Lorem ipsum dolor sit amet.
       </div>
-
+      
       <form id="formId">
         <div class="inputs">
 
@@ -41,7 +41,7 @@
               <p>*</p>
               <label for="firmenname">Firmenname:</label>
             </div>
-            <input type="text" id="firmenname" name="firmenname" maxlength="200" placeholder="HSRM Engineering GmbH" >
+            <input type="text" id="firmenname" name="firmenname" placeholder="HSRM Engineering GmbH" >
           </div>
 
           <div class="input-box">
@@ -49,7 +49,7 @@
               <p>*</p>
               <label for="logo">Logo:</label>
             </div>
-            <input type="file" id="logo" accept=".gif, .jpeg, .png" >
+            <input type="file" id="logo">
           </div>
 
           <div class="input-box">
@@ -57,7 +57,7 @@
               <p>*</p>
               <label for="standort">Standorte:</label>
             </div>
-            <input type="text" id="standort" name="standort" maxlength="300" placeholder="Wiesbaden, München, San Francisco" >
+            <input type="text" id="standort" name="standort" placeholder="Wiesbaden, München, San Francisco" >
           </div>
 
           <div class="str-box">
@@ -69,15 +69,15 @@
           </div>
 
           <div class="nr-box">
-            <input type="text" name="hnummer" title="Bitte eine Hausnummer eingeben" placeholder="Nr." pattern="[0-9]{1,}" >
+            <input type="text" id="hnummer" name="hnummer" title="Bitte eine Hausnummer eingeben" placeholder="Nr.">
           </div>
 
           <div class="input-box">
-            <input type="text" name="plz" title="Bitte eine fünfstellige PLZ eingeben" placeholder="PLZ" pattern="[0-9]{5}" >
+            <input type="text" id="plz" name="plz" title="Bitte eine fünfstellige PLZ eingeben" placeholder="PLZ">
           </div>
 
           <div class="input-box">
-            <input type="text" name="stadt" placeholder="Stadt" >
+            <input type="text" id="stadt" name="stadt" placeholder="Stadt" >
           </div>
 
           <div class="input-box">
@@ -94,7 +94,7 @@
               <p>*</p>
               <label for="homepage">Homepage</label>
             </div>
-            <input type="url" id="homepage" title="Bitte Ihre Homepage angeben" placeholder="https://hs-rm.de" >
+            <input id="homepage" title="Bitte Ihre Homepage angeben" placeholder="https://hs-rm.de" >
           </div>
 
           <div class="text-box">
@@ -110,12 +110,12 @@
               <p>*</p>
               <label for="nachricht-lang">Langbeschreibung (maximal 2400 Zeichen):</label>
             </div>
-            <textarea id="nachricht-lang" maxlength="2400" placeholder="Eine längere Beschreibung, die auf Ihrer Detailseite erscheint." ></textarea>
+            <textarea id="nachricht-lang" placeholder="Eine längere Beschreibung, die auf Ihrer Detailseite erscheint." ></textarea>
           </div>
 
           <div class="input-box">
             <label for="url-bewerber">URL zu Ihrer Bewerberseite:</label>
-            <input type="url" id="url-bewerber" title="Bitte eine URL angeben" placeholder="https://hs-rm.de/bewerbung">
+            <input id="url-bewerber" title="Bitte eine URL angeben" placeholder="https://hs-rm.de/bewerbung">
           </div>
 
           <div class="input-box">
@@ -130,7 +130,7 @@
 
           <div class="text-box">
             <label for="infos">Weitere Informationen für Ihre Bewerber:</label>
-            <textarea id="infos" maxlength="2000" placeholder="Hier könnte noch ein Bewerber-Kontakt oder weitere Anschrift-Informationen stehen."></textarea>
+            <textarea id="infos" placeholder="Hier könnte noch ein Bewerber-Kontakt oder weitere Anschrift-Informationen stehen."></textarea>
           </div>
 
           <div class="input-box">
